@@ -5,8 +5,9 @@
   "description": "Izmaan Lodge — luxury self-catering beachfront lodge, Pomene, Mozambique",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && node scripts/to-dist.mjs",
+    "start": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
     "lint": "next lint"
   },
   "dependencies": {

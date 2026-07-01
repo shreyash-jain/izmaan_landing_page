@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Static export — emits a fully static site (to ./out, then moved to ./dist)
+  // so hosts like Cloudflare Pages can serve it directly. The site has no
+  // SSR / API routes, so nothing is lost.
+  output: "export",
   reactStrictMode: true,
   images: {
-    formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      // Owner-supplied photos can be served from these listing CDNs if linked directly.
-      { protocol: "https", hostname: "**.bstatic.com" },
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
+    // Required for `output: export` — no on-the-fly optimizer at runtime.
+    // Source images are pre-sized; the host (e.g. Cloudflare) can optimize further.
+    unoptimized: true,
   },
 };
 
