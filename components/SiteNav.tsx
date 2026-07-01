@@ -34,15 +34,18 @@ export function SiteNav() {
       }`}
     >
       <nav className="inner container-px flex items-center justify-between py-3">
-        <Link href="/" aria-label={`${site.name} home`} className="flex items-center">
+        <Link href="/" aria-label={`${site.name} home`} className="flex items-center gap-2.5">
           <Image
-            src="/images/logo.png"
-            alt={site.name}
-            width={700}
-            height={810}
+            src="/images/logo-mark.png"
+            alt=""
+            width={240}
+            height={240}
             priority
-            className="h-11 w-auto lg:h-12"
+            className="h-10 w-10 lg:h-11 lg:w-11"
           />
+          <span className="font-heading text-lg font-semibold tracking-[0.3em] text-deepsea">
+            {site.wordmark}
+          </span>
         </Link>
 
         {/* desktop links — centred, generous spacing */}
