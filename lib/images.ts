@@ -44,16 +44,18 @@ export const img = {
   blowholes: { src: "/images/wave.jpg", alt: "Sea surging through rocks at the point" },
   mangroves: { src: "/images/mangrove.jpg", alt: "Quiet mangrove channels behind the peninsula" },
 
-  // ── Gallery — real lodge photos first, then surrounding scenery ─────
+  // ── Gallery — all real Iz-Ma-An Lodge photos (8 from Booking.com + 2 press) ──
   gallery: [
     { src: `${L}/724091683.jpg`, alt: "Iz-Ma-An Lodge on the dune with the ocean beyond" },
     { src: `${L}/720380574.jpg`, alt: "The lodge unit with its blue wraparound balcony" },
-    { src: `${L}/720379117.jpg`, alt: "En-suite bedroom with twin beds and mosquito nets" },
-    { src: `${L}/720380618.jpg`, alt: "Dining area beneath the thatch" },
-    { src: `${L}/720379827.jpg`, alt: "Self-catering kitchen and dining space" },
-    { src: `${L}/720380435.jpg`, alt: "Wood-panelled en-suite bathroom" },
     { src: "/images/lodge-real-1.jpg", alt: "The lodge above the beach at Pomene" },
-    { src: "/images/sunrise.jpg", alt: "Sunrise over the Indian Ocean" },
+    { src: `${L}/720379117.jpg`, alt: "En-suite bedroom with twin wooden beds and mosquito nets" },
+    { src: `${L}/720380286.jpg`, alt: "En-suite bedroom with a draped mosquito net" },
+    { src: `${L}/720379827.jpg`, alt: "Self-catering kitchen and dining space" },
+    { src: `${L}/720380618.jpg`, alt: "Dining area beneath the thatch" },
+    { src: `${L}/720380435.jpg`, alt: "Wood-panelled en-suite bathroom with a glass shower" },
+    { src: `${L}/720379382.jpg`, alt: "En-suite bathroom with pedestal basin" },
+    { src: "/images/lodge-real-2.jpg", alt: "The lodge's open, sea-facing living space" },
   ],
 
   // ── Journal default covers by category ─────────────────────────────
