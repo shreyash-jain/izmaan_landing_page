@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { navLinks, headerLinks, site } from "@/lib/site";
 import { AmbientSound } from "./AmbientSound";
@@ -28,17 +29,20 @@ export function SiteNav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-teal/15 bg-sand/85 backdrop-blur-md"
-          : "bg-transparent"
+          ? "border-b border-teal/15 bg-sand/90 backdrop-blur-md"
+          : "bg-sand/70 backdrop-blur-sm"
       }`}
     >
-      <nav className="inner container-px flex items-center justify-between py-4">
-        <Link
-          href="/"
-          className="font-heading text-lg font-semibold tracking-[0.26em] text-deepsea"
-          aria-label={`${site.name} home`}
-        >
-          {site.wordmark}
+      <nav className="inner container-px flex items-center justify-between py-3">
+        <Link href="/" aria-label={`${site.name} home`} className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt={site.name}
+            width={700}
+            height={810}
+            priority
+            className="h-11 w-auto lg:h-12"
+          />
         </Link>
 
         {/* desktop links — centred, generous spacing */}
