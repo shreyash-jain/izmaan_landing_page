@@ -52,7 +52,7 @@ export default function HomePage() {
 function Hero() {
   return (
     <section id="top" className="relative flex min-h-[100svh] flex-col overflow-hidden">
-      {/* full-bleed ocean photo, fading down into the page background */}
+      {/* full-bleed lodge photo, dimmed so the text reads clearly */}
       <div className="absolute inset-0 -z-10">
         <Photo
           src={img.hero.src}
@@ -61,25 +61,27 @@ function Hero() {
           rounded="rounded-none"
           sizes="100vw"
           className="h-full w-full"
+          imgClassName="object-[center_56%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-sand via-sand/90 to-transparent" />
+        {/* dim + teal tint → photo recedes, text pops */}
+        <div className="absolute inset-0 bg-deepsea/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deepsea/75 via-deepsea/35 to-deepsea/55" />
       </div>
 
-      <div className="inner container-px flex flex-1 flex-col justify-end pb-8 pt-28 text-center">
+      <div className="inner container-px flex flex-1 flex-col justify-center pb-10 pt-28 text-center">
         <Reveal>
-          <div className="mx-auto mb-6 flex flex-wrap items-center justify-center gap-2.5">
+          <div className="mx-auto mb-5 flex flex-wrap items-center justify-center gap-2.5">
             <Pill icon={<IconPin className="h-3.5 w-3.5" />}>{site.location}</Pill>
             <Pill icon={<IconWave className="h-3.5 w-3.5" />}>Beachfront · 100m to sand</Pill>
             <Pill icon={<IconSun className="h-3.5 w-3.5" />}>Solar powered</Pill>
           </div>
-          <h1 className="mx-auto max-w-4xl font-heading text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-tight text-deepsea">
-            Wake to the sound of the <span className="italic text-teal">waves</span>
+          <h1 className="mx-auto max-w-4xl font-heading text-[clamp(2.5rem,6.4vw,4.8rem)] font-semibold leading-[1.04] tracking-tight text-white [text-shadow:0_2px_24px_rgba(11,58,64,0.45)]">
+            Wake to the sound of the <span className="italic text-golden">waves</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-deepsea/70 sm:text-lg">
-            A luxury self-catering lodge on a dune above the Indian Ocean —
-            four en-suite rooms across two units, solar-powered, and your own
-            stretch of white-sand beach.
+          <p className="mx-auto mt-5 max-w-xl font-body text-base leading-relaxed text-white/90 sm:text-lg [text-shadow:0_1px_12px_rgba(11,58,64,0.5)]">
+            A family-run, self-catering lodge on a dune above the Indian Ocean —
+            four en-suite rooms across two thatched units, solar-powered, your own
+            stretch of white sand.
           </p>
         </Reveal>
 
@@ -88,7 +90,7 @@ function Hero() {
         </Reveal>
       </div>
 
-      <div className="pointer-events-none absolute bottom-5 left-0 right-0 z-10 animate-bob text-center font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-teal/80">
+      <div className="pointer-events-none absolute bottom-5 left-0 right-0 z-10 animate-bob text-center font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-white/75">
         Scroll
       </div>
     </section>
@@ -129,8 +131,8 @@ function Story() {
         </Reveal>
         <Reveal delay={120}>
           <Photo
-            src={img.beachWalk.src}
-            alt={img.beachWalk.alt}
+            src={img.deck.src}
+            alt={img.deck.alt}
             className="aspect-[4/5] w-full shadow-card"
             sizes="(max-width:1024px) 100vw, 50vw"
           />
@@ -283,10 +285,10 @@ function Lodge() {
 
 /* ───────────────────────── EXPERIENCES & SEASONS ───────────────────────── */
 const experiences = [
-  { when: "Jul – Nov", title: "Whale watching", image: img.whale, blurb: "Humpbacks pass close to the dune on their migration north." },
-  { when: "Oct – Mar", title: "Turtle nesting", image: img.turtle, blurb: "Loggerheads and leatherbacks come ashore after dark." },
-  { when: "Year-round", title: "Fishing & diving", image: img.reef, blurb: "Reef and game fishing, and dives off an untouched coast." },
-  { when: "Year-round", title: "Kitesurfing", image: img.kite, blurb: "Steady cross-shore wind and a wide, empty lagoon." },
+  { when: "Jul – Nov", title: "Whale watching", blurb: "Humpbacks pass close on their migration north — often near enough to watch from the deck with a coffee." },
+  { when: "Oct – Mar", title: "Turtle nesting", blurb: "Loggerheads and leatherbacks haul ashore after dark to lay, on a beach dark enough for the hatchlings to find the sea." },
+  { when: "All year", title: "Fishing & diving", blurb: "The reef and game fishing Madelaine's father first came for, and dives off a coast few people ever reach." },
+  { when: "All year", title: "Kitesurfing", blurb: "Steady cross-shore wind over a wide, empty lagoon — and, more often than not, no one else on the water." },
 ];
 
 function Experiences() {
@@ -295,54 +297,36 @@ function Experiences() {
       <div className="section container-px">
         <div className="inner">
           <Reveal className="max-w-2xl">
-            <div className="eyebrow mb-6">04 — Experiences & Seasons</div>
+            <div className="eyebrow mb-6">04 — Experiences &amp; Seasons</div>
             <h2 className="font-heading text-[clamp(2rem,4.4vw,3.2rem)] font-semibold leading-[1.1] text-deepsea">
               The ocean keeps its own calendar
             </h2>
             <p className="mt-5 max-w-xl font-body text-[17px] leading-relaxed text-deepsea/70">
-              Come for the whales, stay for the quiet. Pomene's reserve gives you
-              something different in every season — and the same warm water all
-              year.
+              Come for the whales, stay for the quiet. Every season brings
+              something different — and the water stays warm right through.
             </p>
           </Reveal>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {/* editorial almanac — season on the left, what's on to the right */}
+          <div className="mt-12 border-t border-teal/15">
             {experiences.map((e, i) => (
-              <Reveal key={e.title} delay={i * 90}>
-                <article className="card h-full overflow-hidden hover:shadow-lift">
-                  <Photo
-                    src={e.image.src}
-                    alt={e.image.alt}
-                    rounded="rounded-none"
-                    className="h-48 w-full"
-                    sizes="(max-width:768px) 100vw, 25vw"
-                  />
-                  <div className="p-6">
-                    <div className="font-heading text-[11px] font-semibold uppercase tracking-[0.16em] text-coral">
-                      {e.when}
-                    </div>
-                    <h3 className="mt-2 font-heading text-xl font-semibold text-deepsea">
+              <Reveal key={e.title} delay={i * 70}>
+                <div className="grid items-baseline gap-x-10 gap-y-2 border-b border-teal/15 py-7 sm:grid-cols-[200px_1fr]">
+                  <div className="font-heading text-xl font-semibold uppercase tracking-[0.08em] text-teal">
+                    {e.when}
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-2xl font-semibold text-deepsea">
                       {e.title}
                     </h3>
-                    <p className="mt-2 font-body text-[14px] leading-relaxed text-deepsea/65">
+                    <p className="mt-2 max-w-2xl font-body text-[16px] leading-relaxed text-deepsea/70">
                       {e.blurb}
                     </p>
                   </div>
-                </article>
+                </div>
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={120} className="mt-6 rounded-2xl border border-teal/15 bg-white p-6">
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-heading text-[11px] font-semibold uppercase tracking-[0.1em] text-deepsea/60">
-              <span className="text-teal">When to come ·</span>
-              <span>Whales — Jul to Nov</span>
-              <span className="text-golden">/</span>
-              <span>Turtles — Oct to Mar</span>
-              <span className="text-golden">/</span>
-              <span>Fishing, diving &amp; kite — all year</span>
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>
@@ -609,11 +593,8 @@ function Journal({
 function BookConnect() {
   return (
     <section id="book" className="relative overflow-hidden bg-teal text-white">
-      {/* subtle photographic texture behind the teal */}
-      <div className="absolute inset-0 -z-0 opacity-20">
-        <Photo src={img.whale.src} alt="" rounded="rounded-none" className="h-full w-full" sizes="100vw" />
-      </div>
-      <div className="absolute inset-0 -z-0 bg-teal/80" />
+      {/* soft light wash — no stock imagery */}
+      <div className="absolute inset-0 -z-0 bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(255,255,255,0.14),transparent_60%)]" />
       <div className="section container-px relative text-center">
         <Reveal className="mx-auto max-w-2xl">
           <div className="mb-7 font-heading text-xs font-semibold uppercase tracking-[0.22em] text-mist">

@@ -15,7 +15,8 @@ const L = "/images/lodge"; // real lodge photos (Booking.com + press feature)
 
 export const img = {
   // ── Hero (AI-generated coastal hero, or fallback beach photo) ───────
-  hero: { src: "/images/hero.jpg", alt: "The turquoise Indian Ocean and white-sand beach at Pomene, Mozambique" },
+  hero: { src: `${L}/724091683.jpg`, alt: "Iz-Ma-An Lodge on the dune above the Indian Ocean, Pomene" },
+  heroAlt: { src: "/images/lodge-real-1.jpg", alt: "Iz-Ma-An Lodge above the beach at Pomene" },
   // Real lodge exterior (used in the Lodge section & gallery):
   lodgeOnDune: { src: `${L}/724091683.jpg`, alt: "Iz-Ma-An Lodge — thatched beach house on the dune above the Indian Ocean, Pomene" },
 

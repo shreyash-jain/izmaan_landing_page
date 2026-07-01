@@ -7,6 +7,7 @@ export function Photo({
   src,
   alt,
   className = "",
+  imgClassName = "",
   rounded = "rounded-2xl",
   sizes = "(max-width: 768px) 100vw, 50vw",
   priority = false,
@@ -17,6 +18,7 @@ export function Photo({
   src: string;
   alt: string;
   className?: string;
+  imgClassName?: string;
   rounded?: string;
   sizes?: string;
   priority?: boolean;
@@ -32,7 +34,7 @@ export function Photo({
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover transition duration-700 will-change-transform"
+        className={`object-cover transition duration-700 will-change-transform ${imgClassName}`}
       />
       {overlay && (
         <div className="absolute inset-0 bg-gradient-to-t from-deepsea/45 via-deepsea/5 to-transparent" />

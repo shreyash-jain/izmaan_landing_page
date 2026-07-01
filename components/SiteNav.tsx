@@ -25,81 +25,94 @@ export function SiteNav() {
     };
   }, [open]);
 
+  const Wordmark = (
+    <Link href="/" aria-label={`${site.name} home`} className="flex items-center gap-2.5">
+      <Image
+        src="/images/logo-mark.png"
+        alt=""
+        width={240}
+        height={240}
+        priority
+        className="h-10 w-10 lg:h-11 lg:w-11"
+      />
+      <span className="font-heading text-lg font-semibold tracking-[0.3em] text-deepsea">
+        {site.wordmark}
+      </span>
+    </Link>
+  );
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-teal/15 bg-sand/90 backdrop-blur-md"
-          : "bg-sand/70 backdrop-blur-sm"
-      }`}
-    >
-      <nav className="inner container-px flex items-center justify-between py-3">
-        <Link href="/" aria-label={`${site.name} home`} className="flex items-center gap-2.5">
-          <Image
-            src="/images/logo-mark.png"
-            alt=""
-            width={240}
-            height={240}
-            priority
-            className="h-10 w-10 lg:h-11 lg:w-11"
-          />
-          <span className="font-heading text-lg font-semibold tracking-[0.3em] text-deepsea">
-            {site.wordmark}
-          </span>
-        </Link>
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "border-b border-teal/15 bg-sand/90 backdrop-blur-md"
+            : "bg-sand/70 backdrop-blur-sm"
+        }`}
+      >
+        <nav className="inner container-px flex items-center justify-between py-3">
+          {Wordmark}
 
-        {/* desktop links — centred, generous spacing */}
-        <ul className="hidden items-center gap-9 font-heading text-[11px] font-semibold uppercase tracking-[0.13em] text-deepsea/70 lg:flex">
-          {headerLinks.map((l) => (
-            <li key={l.href}>
-              <Link href={l.href} className="transition hover:text-teal">
-                {l.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          {/* desktop links — centred, generous spacing */}
+          <ul className="hidden items-center gap-9 font-heading text-[11px] font-semibold uppercase tracking-[0.13em] text-deepsea/70 lg:flex">
+            {headerLinks.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="transition hover:text-teal">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* desktop actions */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <AmbientSound compact />
-          <a
-            href={site.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-coral !px-5 !py-2.5 text-xs"
-          >
-            Check availability
-          </a>
-        </div>
-
-        {/* mobile toggle */}
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full border border-teal/25 bg-white/60 lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-        >
-          <span className="sr-only">Menu</span>
-          <div className="flex flex-col gap-1.5">
-            <span
-              className={`block h-0.5 w-5 bg-deepsea transition ${open ? "translate-y-2 rotate-45" : ""}`}
-            />
-            <span className={`block h-0.5 w-5 bg-deepsea transition ${open ? "opacity-0" : ""}`} />
-            <span
-              className={`block h-0.5 w-5 bg-deepsea transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
-            />
+          {/* desktop actions */}
+          <div className="hidden items-center gap-3 lg:flex">
+            <AmbientSound compact />
+            <a
+              href={site.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-coral !px-5 !py-2.5 text-xs"
+            >
+              Check availability
+            </a>
           </div>
-        </button>
-      </nav>
 
-      {/* mobile drawer */}
+          {/* mobile hamburger — opens the drawer */}
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-teal/25 bg-white/70 lg:hidden"
+            aria-label="Open menu"
+            aria-expanded={open}
+          >
+            <div className="flex flex-col gap-1.5">
+              <span className="block h-0.5 w-5 bg-deepsea" />
+              <span className="block h-0.5 w-5 bg-deepsea" />
+              <span className="block h-0.5 w-5 bg-deepsea" />
+            </div>
+          </button>
+        </nav>
+      </header>
+
+      {/* mobile drawer — sibling of the (blurred) header so it covers the full viewport */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-sand px-6 pb-10 pt-24 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[70] flex flex-col bg-sand px-6 pb-10 pt-4 transition-opacity duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <ul className="flex flex-col gap-1">
+        <div className="flex items-center justify-between">
+          {Wordmark}
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-teal/25 bg-white/70 text-xl text-deepsea"
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+        </div>
+
+        <ul className="mt-6 flex flex-col">
           {navLinks.map((l) => (
             <li key={l.href}>
               <Link
@@ -112,7 +125,7 @@ export function SiteNav() {
             </li>
           ))}
         </ul>
-        <div className="mt-8 flex items-center justify-between gap-4">
+        <div className="mt-auto flex items-center justify-between gap-4 pt-8">
           <a
             href={site.bookingUrl}
             target="_blank"
@@ -125,6 +138,6 @@ export function SiteNav() {
           <AmbientSound compact />
         </div>
       </div>
-    </header>
+    </>
   );
 }
