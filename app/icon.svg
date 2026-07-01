@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#16B5AC"/>
+  <path d="M6 44 Q18 36 32 44 T58 44 V64 H6 Z" fill="#FBF7EF" opacity="0.85"/>
+  <circle cx="46" cy="20" r="7" fill="#F6C56B"/>
+  <text x="32" y="34" text-anchor="middle" font-family="Poppins, sans-serif" font-size="22" font-weight="700" fill="#FBF7EF" letter-spacing="1">IZ</text>
+</svg>

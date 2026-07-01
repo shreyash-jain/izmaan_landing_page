@@ -1,0 +1,646 @@
+import Link from "next/link";
+import { SiteNav } from "@/components/SiteNav";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { BookingBar } from "@/components/BookingBar";
+import { Gallery } from "@/components/Gallery";
+import { Reveal } from "@/components/Reveal";
+import { Photo } from "@/components/Photo";
+import {
+  IconDiving,
+  IconSnorkel,
+  IconFish,
+  IconRuins,
+  IconBlowhole,
+  IconMangrove,
+  IconWave,
+  IconSun,
+  IconPin,
+} from "@/components/Icons";
+import { site, whatsappUrl } from "@/lib/site";
+import { img, journalCover } from "@/lib/images";
+import { getAllPostMeta, formatDate } from "@/lib/posts";
+
+export default function HomePage() {
+  const posts = getAllPostMeta();
+  const featured = posts.find((p) => p.featured) ?? posts[0];
+  const rest = posts.filter((p) => p.slug !== featured?.slug).slice(0, 4);
+
+  return (
+    <>
+      <SiteNav />
+      <main>
+        <Hero />
+        <Story />
+        <Philosophy />
+        <Lodge />
+        <Experiences />
+        <ThingsToDo />
+        <GallerySection />
+        <GettingThere />
+        <Packages />
+        <Journal featured={featured} rest={rest} />
+        <BookConnect />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+    </>
+  );
+}
+
+/* ───────────────────────── HERO ───────────────────────── */
+function Hero() {
+  return (
+    <section id="top" className="relative flex min-h-[100svh] flex-col overflow-hidden">
+      {/* full-bleed ocean photo, fading down into the page background */}
+      <div className="absolute inset-0 -z-10">
+        <Photo
+          src={img.hero.src}
+          alt={img.hero.alt}
+          priority
+          rounded="rounded-none"
+          sizes="100vw"
+          className="h-full w-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-sand via-sand/90 to-transparent" />
+      </div>
+
+      <div className="inner container-px flex flex-1 flex-col justify-end pb-8 pt-28 text-center">
+        <Reveal>
+          <div className="mx-auto mb-6 flex flex-wrap items-center justify-center gap-2.5">
+            <Pill icon={<IconPin className="h-3.5 w-3.5" />}>{site.location}</Pill>
+            <Pill icon={<IconWave className="h-3.5 w-3.5" />}>Beachfront · 100m to sand</Pill>
+            <Pill icon={<IconSun className="h-3.5 w-3.5" />}>Solar powered</Pill>
+          </div>
+          <h1 className="mx-auto max-w-4xl font-heading text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-tight text-deepsea">
+            Wake to the sound of the <span className="italic text-teal">waves</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-deepsea/70 sm:text-lg">
+            A luxury self-catering lodge on a dune above the Indian Ocean —
+            four en-suite rooms across two units, solar-powered, and your own
+            stretch of white-sand beach.
+          </p>
+        </Reveal>
+
+        <Reveal delay={120} className="mt-9 w-full">
+          <BookingBar />
+        </Reveal>
+      </div>
+
+      <div className="pointer-events-none absolute bottom-5 left-0 right-0 z-10 animate-bob text-center font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-teal/80">
+        Scroll
+      </div>
+    </section>
+  );
+}
+
+function Pill({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-teal/20 bg-white/75 px-4 py-2 font-heading text-xs font-medium text-deepsea/80 backdrop-blur">
+      <span className="text-teal">{icon}</span>
+      {children}
+    </span>
+  );
+}
+
+/* ───────────────────────── STORY / ABOUT ───────────────────────── */
+function Story() {
+  return (
+    <section id="story" className="section container-px">
+      <div className="inner grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <Reveal>
+          <div className="eyebrow mb-6">01 — The Story</div>
+          <blockquote className="font-heading text-[clamp(1.6rem,3.2vw,2.5rem)] font-medium leading-[1.25] text-deepsea">
+            “I came just after the war, and I just knew I would never want to
+            stay in any other place.”
+          </blockquote>
+          <p className="mt-7 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
+            Madelaine first arrived in Pomene in the late nineties. Months later
+            she came back with her father — he'd heard it was the finest fishing
+            on the coast. He bought his first property soon after, the family
+            followed, and Pomene quietly became home across three generations.
+          </p>
+          <p className="mt-5 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
+            A father-and-daughter journey that became a family home — and the
+            reason we build for people who come back, not just people who visit
+            once.
+          </p>
+        </Reveal>
+        <Reveal delay={120}>
+          <Photo
+            src={img.beachWalk.src}
+            alt={img.beachWalk.alt}
+            className="aspect-[4/5] w-full shadow-card"
+            sizes="(max-width:1024px) 100vw, 50vw"
+          />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── PHILOSOPHY (teal band) ───────────────────────── */
+function Philosophy() {
+  return (
+    <section id="philosophy" className="bg-teal text-white">
+      <div className="section container-px text-center">
+        <Reveal className="mx-auto max-w-3xl">
+          <div className="mb-7 font-heading text-xs font-semibold uppercase tracking-[0.22em] text-mist">
+            02 — The Philosophy
+          </div>
+          <p className="font-heading text-[clamp(1.8rem,4vw,3rem)] font-medium leading-[1.2] text-white">
+            An open mind, <span className="italic text-golden">no locks.</span>{" "}
+            Doors here stay open — and so do the people who walk through them.
+          </p>
+          <p className="mx-auto mt-8 max-w-xl font-body text-[17px] leading-relaxed text-mist/90">
+            Featured in Revista Índico's "open mind, no locks" piece, Izmaan was
+            built on a simple idea: trust, space, and the quiet that only a place
+            this remote can give you.
+          </p>
+          <a
+            href={site.press.indico}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block border-b border-white/50 pb-1 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:border-golden hover:text-golden"
+          >
+            Read the feature
+          </a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── THE LODGE / ROOMS ───────────────────────── */
+const stats = [
+  { n: "4", l: "En-suite bedrooms" },
+  { n: "2", l: "Private units" },
+  { n: "100%", l: "Solar powered" },
+  { n: "100m", l: "To white sand" },
+];
+
+const rooms = [
+  {
+    name: "Sea Breeze Unit",
+    detail: "Two en-suite bedrooms · sleeps 4",
+    blurb:
+      "Twin wooden-framed beds under white mosquito nets, a private bathroom, and the balcony with the blue rail looking straight out to sea.",
+    image: img.roomSeaBreeze,
+    pills: ["En-suite", "Sea-facing balcony", "Mosquito nets"],
+  },
+  {
+    name: "Palm Shade Unit",
+    detail: "Two en-suite bedrooms · sleeps 4",
+    blurb:
+      "Wood-panelled rooms with draped mosquito nets and their own en-suite, tucked into the dune a few barefoot steps from the path.",
+    image: img.roomPalmShade,
+    pills: ["En-suite", "Self-catering", "Solar power"],
+  },
+];
+
+function Lodge() {
+  return (
+    <section id="lodge" className="section container-px">
+      <div className="inner">
+        <div className="grid items-end gap-10 lg:grid-cols-2">
+          <Reveal>
+            <div className="eyebrow mb-6">03 — The Lodge</div>
+            <h2 className="font-heading text-[clamp(2rem,4.4vw,3.2rem)] font-semibold leading-[1.08] text-deepsea">
+              Thatch, timber and the open sea
+            </h2>
+            <p className="mt-6 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
+              Two timber-and-thatch units sit right on the dune, their blue
+              balconies opening to nothing but the Indian Ocean. Inside: four
+              en-suite bedrooms with wooden beds under white mosquito nets, a
+              full self-catering kitchen, and a thatched dining space made for
+              long, slow lunches. Solar-powered, barefoot, and entirely your own.
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <Photo
+              src={img.lodgeExterior.src}
+              alt={img.lodgeExterior.alt}
+              className="aspect-[16/10] w-full shadow-card"
+              sizes="(max-width:1024px) 100vw, 50vw"
+            />
+          </Reveal>
+        </div>
+
+        {/* room cards */}
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+          {rooms.map((r, i) => (
+            <Reveal key={r.name} delay={i * 100}>
+              <article className="card overflow-hidden hover:shadow-lift">
+                <Photo
+                  src={r.image.src}
+                  alt={r.image.alt}
+                  rounded="rounded-none"
+                  className="aspect-[16/10] w-full"
+                  sizes="(max-width:768px) 100vw, 50vw"
+                />
+                <div className="p-7">
+                  <div className="font-heading text-[11px] font-semibold uppercase tracking-[0.16em] text-coral">
+                    {r.detail}
+                  </div>
+                  <h3 className="mt-2 font-heading text-2xl font-semibold text-deepsea">
+                    {r.name}
+                  </h3>
+                  <p className="mt-2 font-body text-[15px] leading-relaxed text-deepsea/65">
+                    {r.blurb}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {r.pills.map((p) => (
+                      <span key={p} className="pill">
+                        {p}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        {/* stat strip */}
+        <Reveal delay={120} className="mt-6 grid grid-cols-2 overflow-hidden rounded-2xl border border-teal/15 sm:grid-cols-4">
+          {stats.map((s, i) => (
+            <div
+              key={s.l}
+              className={`bg-mist/40 p-6 ${i !== 0 ? "border-teal/15 sm:border-l" : ""}`}
+            >
+              <div className="font-heading text-4xl font-semibold text-teal">{s.n}</div>
+              <div className="mt-2 font-heading text-[11px] font-semibold uppercase tracking-[0.12em] text-deepsea/60">
+                {s.l}
+              </div>
+            </div>
+          ))}
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── EXPERIENCES & SEASONS ───────────────────────── */
+const experiences = [
+  { when: "Jul – Nov", title: "Whale watching", image: img.whale, blurb: "Humpbacks pass close to the dune on their migration north." },
+  { when: "Oct – Mar", title: "Turtle nesting", image: img.turtle, blurb: "Loggerheads and leatherbacks come ashore after dark." },
+  { when: "Year-round", title: "Fishing & diving", image: img.reef, blurb: "Reef and game fishing, and dives off an untouched coast." },
+  { when: "Year-round", title: "Kitesurfing", image: img.kite, blurb: "Steady cross-shore wind and a wide, empty lagoon." },
+];
+
+function Experiences() {
+  return (
+    <section id="experiences" className="bg-mist/40">
+      <div className="section container-px">
+        <div className="inner">
+          <Reveal className="max-w-2xl">
+            <div className="eyebrow mb-6">04 — Experiences & Seasons</div>
+            <h2 className="font-heading text-[clamp(2rem,4.4vw,3.2rem)] font-semibold leading-[1.1] text-deepsea">
+              The ocean keeps its own calendar
+            </h2>
+            <p className="mt-5 max-w-xl font-body text-[17px] leading-relaxed text-deepsea/70">
+              Come for the whales, stay for the quiet. Pomene's reserve gives you
+              something different in every season — and the same warm water all
+              year.
+            </p>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {experiences.map((e, i) => (
+              <Reveal key={e.title} delay={i * 90}>
+                <article className="card h-full overflow-hidden hover:shadow-lift">
+                  <Photo
+                    src={e.image.src}
+                    alt={e.image.alt}
+                    rounded="rounded-none"
+                    className="h-48 w-full"
+                    sizes="(max-width:768px) 100vw, 25vw"
+                  />
+                  <div className="p-6">
+                    <div className="font-heading text-[11px] font-semibold uppercase tracking-[0.16em] text-coral">
+                      {e.when}
+                    </div>
+                    <h3 className="mt-2 font-heading text-xl font-semibold text-deepsea">
+                      {e.title}
+                    </h3>
+                    <p className="mt-2 font-body text-[14px] leading-relaxed text-deepsea/65">
+                      {e.blurb}
+                    </p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={120} className="mt-6 rounded-2xl border border-teal/15 bg-white p-6">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-heading text-[11px] font-semibold uppercase tracking-[0.1em] text-deepsea/60">
+              <span className="text-teal">When to come ·</span>
+              <span>Whales — Jul to Nov</span>
+              <span className="text-golden">/</span>
+              <span>Turtles — Oct to Mar</span>
+              <span className="text-golden">/</span>
+              <span>Fishing, diving &amp; kite — all year</span>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── THINGS TO DO ───────────────────────── */
+const thingsToDo = [
+  { Icon: IconDiving, title: "Diving", text: "Untouched reefs and warm, clear water off a coast few divers ever reach." },
+  { Icon: IconSnorkel, title: "Snorkeling", text: "Step off the beach into coral gardens and shoals of reef fish." },
+  { Icon: IconFish, title: "Fishing charters", text: "Reef and game fishing — Pomene is known up the coast for it." },
+  { Icon: IconRuins, title: "Old Pomene hotel ruins", text: "Wander the haunting shell of the abandoned colonial-era hotel." },
+  { Icon: IconBlowhole, title: "The blow holes", text: "Watch the sea surge and spout through the rocks at the point." },
+  { Icon: IconMangrove, title: "Mangroves", text: "Paddle the quiet mangrove channels behind the peninsula." },
+];
+
+function ThingsToDo() {
+  return (
+    <section id="things-to-do" className="section container-px">
+      <div className="inner">
+        <Reveal className="max-w-2xl">
+          <div className="eyebrow mb-6">05 — Things to Do</div>
+          <h2 className="font-heading text-[clamp(2rem,4.4vw,3.2rem)] font-semibold leading-[1.1] text-deepsea">
+            Days that fill themselves
+          </h2>
+          <p className="mt-5 max-w-xl font-body text-[17px] leading-relaxed text-deepsea/70">
+            Everything is a short walk or a short boat ride away — and just as
+            often the best plan is no plan at all.
+          </p>
+        </Reveal>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {thingsToDo.map((t, i) => (
+            <Reveal key={t.title} delay={(i % 3) * 90}>
+              <article className="card h-full p-7 hover:-translate-y-1 hover:shadow-lift">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mist/60 text-teal">
+                  <t.Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 font-heading text-xl font-semibold text-deepsea">
+                  {t.title}
+                </h3>
+                <p className="mt-2 font-body text-[15px] leading-relaxed text-deepsea/65">
+                  {t.text}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── GALLERY ───────────────────────── */
+function GallerySection() {
+  return (
+    <section id="gallery" className="bg-mist/40">
+      <div className="section container-px">
+        <div className="inner">
+          <Reveal className="max-w-2xl">
+            <div className="eyebrow mb-6">06 — Gallery</div>
+            <h2 className="font-heading text-[clamp(2rem,4.4vw,3.2rem)] font-semibold leading-[1.1] text-deepsea">
+              A few frames from the dune
+            </h2>
+            <p className="mt-5 max-w-xl font-body text-[17px] leading-relaxed text-deepsea/70">
+              The thatched units, the mosquito-net bedrooms, the kitchen and the
+              view from the balcony. Tap any image to see it larger.
+            </p>
+          </Reveal>
+          <Reveal delay={100} className="mt-10">
+            <Gallery />
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── GETTING THERE ───────────────────────── */
+const journeyFacts = [
+  { n: "106 km", t: "From Vilankulo airport — your nearest arrival point by air." },
+  { n: "4×4", t: "Essential for the final sand sections. High clearance, low pressure." },
+  { n: "Off-grid", t: "Solar power, no crowds, and the kind of dark sky you'd forgotten existed." },
+];
+
+function GettingThere() {
+  return (
+    <section id="getting-there" className="section container-px">
+      <div className="inner grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <Reveal>
+          <div className="eyebrow mb-6">07 — Getting There</div>
+          <h2 className="font-heading text-[clamp(2rem,4.4vw,3rem)] font-semibold leading-[1.1] text-deepsea">
+            Remote, honestly
+          </h2>
+          <p className="mt-6 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
+            The reward for a place this untouched is the journey to reach it.
+            Pomene sits about 106 km from Vilankulo airport on sand tracks — a
+            4×4 is essential, not optional. Tell us your plans and we'll guide
+            you in, step by step.
+          </p>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-teal mt-8"
+          >
+            Ask us about the drive
+          </a>
+        </Reveal>
+        <Reveal delay={120} className="flex flex-col gap-4">
+          {journeyFacts.map((f) => (
+            <div
+              key={f.n}
+              className="flex items-baseline gap-5 rounded-2xl border border-teal/15 bg-mist/30 p-6"
+            >
+              <div className="min-w-[96px] font-heading text-3xl font-semibold text-teal">
+                {f.n}
+              </div>
+              <p className="font-body text-[15px] leading-relaxed text-deepsea/70">
+                {f.t}
+              </p>
+            </div>
+          ))}
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── PACKAGES (placeholder) ───────────────────────── */
+function Packages() {
+  return (
+    <section id="packages" className="bg-mist/40">
+      <div className="section container-px text-center">
+        <Reveal className="mx-auto max-w-2xl">
+          <div className="eyebrow mb-6">08 — Packages</div>
+          <h2 className="font-heading text-[clamp(1.9rem,4.2vw,3rem)] font-semibold leading-[1.1] text-deepsea">
+            Stays, curated
+          </h2>
+          <p className="mx-auto mt-5 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
+            Seasonal packages — fishing weeks, whale season, family stays — are
+            on their way. This space is built and waiting for them.
+          </p>
+          <div className="mt-9 rounded-2xl border border-dashed border-teal/35 bg-white p-12">
+            <div className="font-heading text-xs font-medium uppercase tracking-[0.08em] text-deepsea/50">
+              Packages module — content coming soon
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── JOURNAL ───────────────────────── */
+function Journal({
+  featured,
+  rest,
+}: {
+  featured: ReturnType<typeof getAllPostMeta>[number] | undefined;
+  rest: ReturnType<typeof getAllPostMeta>;
+}) {
+  if (!featured) return null;
+  const fc = journalCover(featured.category);
+  return (
+    <section id="journal" className="section container-px">
+      <div className="inner">
+        <Reveal className="flex flex-wrap items-end justify-between gap-5">
+          <div className="max-w-2xl">
+            <div className="eyebrow mb-6">09 — Field Notes</div>
+            <h2 className="font-heading text-[clamp(2rem,4.4vw,3.2rem)] font-semibold leading-[1.1] text-deepsea">
+              Notes from the dune
+            </h2>
+            <p className="mt-5 font-body text-[17px] leading-relaxed text-deepsea/70">
+              Travel guides, season notes and stories from Pomene — everything
+              you need to plan a trip to one of the last quiet corners of the
+              Mozambican coast.
+            </p>
+          </div>
+          <Link
+            href="/journal"
+            className="whitespace-nowrap border-b border-teal/50 pb-1 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-teal transition hover:border-coral hover:text-coral"
+          >
+            View all posts
+          </Link>
+        </Reveal>
+
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          {/* featured */}
+          <Reveal className="lg:col-span-2">
+            <Link href={`/journal/${featured.slug}`} className="card group block h-full overflow-hidden hover:shadow-lift">
+              <Photo src={featured.cover ?? fc.src} alt={featured.coverAlt || fc.alt} rounded="rounded-none" className="aspect-[16/9] w-full" sizes="(max-width:1024px) 100vw, 66vw" />
+              <div className="p-7">
+                <div className="flex gap-3 font-heading text-[11px] font-semibold uppercase tracking-[0.16em] text-coral">
+                  <span>{featured.category}</span>
+                  <span className="text-golden">·</span>
+                  <span className="text-deepsea/50">{featured.readingTime}</span>
+                </div>
+                <h3 className="mt-3 max-w-xl font-heading text-2xl font-semibold leading-snug text-deepsea sm:text-3xl">
+                  {featured.title}
+                </h3>
+                <span className="mt-4 inline-block font-heading text-xs font-semibold uppercase tracking-[0.14em] text-teal">
+                  Read the guide →
+                </span>
+              </div>
+            </Link>
+          </Reveal>
+
+          {/* side stack */}
+          <div className="flex flex-col gap-5">
+            {rest.slice(0, 2).map((p, i) => {
+              const c = journalCover(p.category);
+              return (
+                <Reveal key={p.slug} delay={i * 100} className="flex-1">
+                  <Link href={`/journal/${p.slug}`} className="card group flex h-full flex-col overflow-hidden hover:shadow-lift">
+                    <Photo src={p.cover ?? c.src} alt={p.coverAlt || c.alt} rounded="rounded-none" className="h-36 w-full" sizes="(max-width:1024px) 100vw, 33vw" />
+                    <div className="p-5">
+                      <div className="font-heading text-[11px] font-semibold uppercase tracking-[0.14em] text-coral">
+                        {p.category}
+                      </div>
+                      <h3 className="mt-2 font-heading text-lg font-semibold leading-snug text-deepsea">
+                        {p.title}
+                      </h3>
+                    </div>
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* three-up recent */}
+        {rest.length > 2 && (
+          <div className="mt-5 grid gap-5 sm:grid-cols-3">
+            {rest.slice(2, 5).map((p, i) => {
+              const c = journalCover(p.category);
+              return (
+                <Reveal key={p.slug} delay={i * 90}>
+                  <Link href={`/journal/${p.slug}`} className="card group block h-full overflow-hidden hover:shadow-lift">
+                    <Photo src={p.cover ?? c.src} alt={p.coverAlt || c.alt} rounded="rounded-none" className="h-44 w-full" sizes="(max-width:768px) 100vw, 33vw" />
+                    <div className="p-6">
+                      <div className="font-heading text-[11px] font-semibold uppercase tracking-[0.14em] text-coral">
+                        {p.category}
+                      </div>
+                      <h3 className="mt-2 font-heading text-lg font-semibold leading-snug text-deepsea">
+                        {p.title}
+                      </h3>
+                      <div className="mt-3 font-body text-xs text-deepsea/50">
+                        {formatDate(p.date)} · {p.readingTime}
+                      </div>
+                    </div>
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── BOOK / CONNECT ───────────────────────── */
+function BookConnect() {
+  return (
+    <section id="book" className="relative overflow-hidden bg-teal text-white">
+      {/* subtle photographic texture behind the teal */}
+      <div className="absolute inset-0 -z-0 opacity-20">
+        <Photo src={img.whale.src} alt="" rounded="rounded-none" className="h-full w-full" sizes="100vw" />
+      </div>
+      <div className="absolute inset-0 -z-0 bg-teal/80" />
+      <div className="section container-px relative text-center">
+        <Reveal className="mx-auto max-w-2xl">
+          <div className="mb-7 font-heading text-xs font-semibold uppercase tracking-[0.22em] text-mist">
+            Book · Connect
+          </div>
+          <h2 className="font-heading text-[clamp(2.2rem,5.5vw,3.8rem)] font-semibold leading-[1.08] text-white">
+            Come and stay a few times a year
+          </h2>
+          <p className="mx-auto mt-6 max-w-md font-body text-[17px] leading-relaxed text-mist/90">
+            Madelaine's wish is simple — that guests become almost like family,
+            and keep coming back. Check dates with our booking partner, or just
+            message us and we'll help you plan it.
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
+              Check availability →
+            </a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+              <span className="h-2 w-2 rounded-full bg-[#0a2a16]" />
+              Enquire on WhatsApp
+            </a>
+          </div>
+          <div className="mt-6 font-body text-sm text-mist/70">
+            Booking via Booking.com · WhatsApp +27 82 374 4676
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

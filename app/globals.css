@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-poppins: "Poppins", system-ui, sans-serif;
+    --font-inter: "Inter", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sand text-deepsea font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading text-deepsea;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: #16b5ac;
+    color: #fbf7ef;
+  }
+
+  /* On-brand focus ring (replaces the harsh default black box) */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  input:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #16b5ac;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+  .inner {
+    @apply mx-auto w-full max-w-content;
+  }
+
+  /* Eyebrow / section kicker */
+  .eyebrow {
+    @apply font-heading text-xs font-semibold uppercase tracking-[0.22em] text-teal;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-heading text-sm font-semibold transition
+           duration-200 ease-out;
+  }
+  .btn-coral {
+    @apply btn bg-coral px-7 py-3.5 text-white shadow-soft hover:bg-coral-deep hover:shadow-lift hover:-translate-y-0.5;
+  }
+  .btn-teal {
+    @apply btn bg-teal px-7 py-3.5 text-white shadow-soft hover:bg-teal-deep hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply btn border border-teal/40 bg-white/60 px-7 py-3.5 text-deepsea hover:border-teal hover:bg-white;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] px-6 py-3.5 text-[#0a2a16] shadow-soft hover:-translate-y-0.5;
+  }
+
+  /* Feature pills */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-teal/25 bg-mist/50 px-4 py-2
+           font-heading text-xs font-medium text-deepsea;
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-2xl bg-white shadow-soft transition duration-300;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Prose for blog posts */
+.prose-izmaan {
+  @apply font-body text-[17px] leading-[1.85] text-deepsea/85;
+}
+.prose-izmaan h2 {
+  @apply mt-12 mb-4 font-heading text-2xl font-semibold text-deepsea sm:text-3xl;
+}
+.prose-izmaan h3 {
+  @apply mt-8 mb-3 font-heading text-xl font-semibold text-deepsea;
+}
+.prose-izmaan p {
+  @apply my-5;
+}
+.prose-izmaan a {
+  @apply text-teal-deep underline decoration-teal/40 underline-offset-2 hover:decoration-teal;
+}
+.prose-izmaan ul {
+  @apply my-5 list-disc space-y-2 pl-6;
+}
+.prose-izmaan ol {
+  @apply my-5 list-decimal space-y-2 pl-6;
+}
+.prose-izmaan blockquote {
+  @apply my-7 border-l-4 border-coral/60 bg-mist/40 py-3 pl-5 pr-4 font-heading text-xl italic text-deepsea;
+}
+.prose-izmaan strong {
+  @apply font-semibold text-deepsea;
+}
+.prose-izmaan table {
+  @apply my-7 w-full border-collapse overflow-hidden rounded-xl text-left text-[15px];
+}
+.prose-izmaan th {
+  @apply border-b border-teal/20 bg-mist/40 px-4 py-3 font-heading text-sm font-semibold text-deepsea;
+}
+.prose-izmaan td {
+  @apply border-b border-teal/10 px-4 py-3 text-deepsea/80;
+}
+.prose-izmaan img {
+  @apply my-8 rounded-2xl shadow-soft;
+}
+
+input[type="date"],
+select {
+  color-scheme: light;
+}
