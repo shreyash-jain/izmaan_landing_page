@@ -62,7 +62,6 @@ export function Footer() {
       <div className="border-t border-mist/15">
         <div className="inner container-px flex flex-wrap justify-between gap-3 py-6 font-body text-xs text-mist/60">
           <span>© {new Date().getFullYear()} {site.name} · Pomene, Mozambique</span>
-          <span>Built by {site.builtBy}</span>
         </div>
       </div>
     </footer>
