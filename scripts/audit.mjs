@@ -3,7 +3,7 @@
 // basic a11y signals and screenshots. Run: node scripts/audit.mjs
 import { chromium, devices } from "@playwright/test";
 import { createServer } from "node:http";
-import { readFile, stat, mkdir } from "node:fs/promises";
+import { readFile, stat, mkdir, writeFile } from "node:fs/promises";
 import { extname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -127,11 +127,14 @@ async function walk(browser, label, contextOpts, pages) {
   await browser.close();
   server.close();
 
-  // report
+  // report — printed AND written to a file (stdout capture is unreliable here)
   const order = { ERR: 0, JS: 1, A11Y: 2, SEO: 3 };
   findings.sort((a, b) => (order[a.sev] ?? 9) - (order[b.sev] ?? 9));
-  console.log("\n================ AUDIT FINDINGS ================");
-  if (!findings.length) console.log("No automated findings.");
-  for (const f of findings) console.log(`[${f.sev}] ${f.page}  —  ${f.msg}`);
-  console.log(`\nScreenshots → .audit/  (${routes.length * 2} shots)`);
+  const lines = ["================ AUDIT FINDINGS ================"];
+  if (!findings.length) lines.push("No automated findings — all clear. ✓");
+  for (const f of findings) lines.push(`[${f.sev}] ${f.page}  —  ${f.msg}`);
+  lines.push(`\nScreenshots → .audit/  (${routes.length * 2} shots)`);
+  const out = lines.join("\n");
+  console.log("\n" + out);
+  await writeFile(join(OUT, "report.txt"), out + "\n");
 })();
