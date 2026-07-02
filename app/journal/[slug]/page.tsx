@@ -76,7 +76,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="top">
         <article className="container-px pt-32">
           <div className="mx-auto max-w-3xl">
             <Link

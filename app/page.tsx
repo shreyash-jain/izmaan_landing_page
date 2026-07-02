@@ -17,9 +17,54 @@ import {
   IconSun,
   IconPin,
 } from "@/components/Icons";
-import { site, whatsappUrl } from "@/lib/site";
+import { site, whatsappUrl, mapsUrl } from "@/lib/site";
 import { img, journalCover } from "@/lib/images";
 import { getAllPostMeta, formatDate } from "@/lib/posts";
+
+// LodgingBusiness structured data — lets Google understand this is a lodge in
+// Pomene with a location, rooms and amenities (local-SEO / rich results).
+const lodgingLd = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  name: site.name,
+  description: site.description,
+  url: site.url,
+  image: [
+    `${site.url}/og.jpg`,
+    `${site.url}${img.lodgeExterior.src}`,
+    `${site.url}${img.roomSeaBreeze.src}`,
+  ],
+  telephone: site.whatsappDisplay,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: site.address.locality,
+    addressRegion: site.address.region,
+    addressCountry: site.address.countryCode,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: site.geo.lat,
+    longitude: site.geo.lng,
+  },
+  hasMap: mapsUrl,
+  numberOfRooms: 4,
+  petsAllowed: false,
+  smokingAllowed: false,
+  currenciesAccepted: "ZAR, USD, MZN",
+  sameAs: [site.social.facebook],
+  amenityFeature: [
+    "Beachfront",
+    "Solar power",
+    "Self-catering kitchen",
+    "En-suite bathrooms",
+    "Sea view",
+    "Free parking",
+  ].map((name) => ({
+    "@type": "LocationFeatureSpecification",
+    name,
+    value: true,
+  })),
+};
 
 export default function HomePage() {
   const posts = getAllPostMeta();
@@ -28,6 +73,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(lodgingLd) }}
+      />
       <SiteNav />
       <main>
         <Hero />
@@ -427,14 +476,30 @@ function GettingThere() {
             4×4 is essential, not optional. Tell us your plans and we'll guide
             you in, step by step.
           </p>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-teal mt-8"
-          >
-            Ask us about the drive
-          </a>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-teal"
+            >
+              Ask us about the drive
+            </a>
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-[0.14em] text-teal transition hover:text-coral"
+            >
+              <IconPin className="h-4 w-4" />
+              View on map
+            </a>
+          </div>
+          <p className="mt-4 font-body text-sm text-deepsea/50">
+            {site.address.locality}, {site.address.region},{" "}
+            {site.address.country}
+            {site.geo.approximate ? " · pin approximate" : ""}
+          </p>
         </Reveal>
         <Reveal delay={120} className="flex flex-col gap-4">
           {journeyFacts.map((f) => (
@@ -456,26 +521,70 @@ function GettingThere() {
   );
 }
 
-/* ───────────────────────── PACKAGES (placeholder) ───────────────────────── */
+/* ───────────────────────── STAYS / PACKAGES ───────────────────────── */
+const stays = [
+  {
+    title: "Fishing weeks",
+    when: "All year",
+    blurb:
+      "The reef and game fishing Pomene is known for, up the coast. Base yourself at the lodge, self-cater the catch, and fish a coastline few boats ever reach.",
+  },
+  {
+    title: "Whale season",
+    when: "Jul – Nov",
+    blurb:
+      "Humpbacks pass close on their migration north — often near enough to watch from the deck. Come for the season the ocean puts on its best show.",
+  },
+  {
+    title: "Whole-lodge family stays",
+    when: "All year",
+    blurb:
+      "Take both thatched units — four en-suite rooms, sleeps eight — and have the dune, the kitchen and your own stretch of sand entirely to yourselves.",
+  },
+];
+
 function Packages() {
   return (
     <section id="packages" className="bg-mist/40">
-      <div className="section container-px text-center">
-        <Reveal className="mx-auto max-w-2xl">
-          <div className="eyebrow mb-6">08 — Packages</div>
-          <h2 className="font-heading text-[clamp(1.9rem,4.2vw,3rem)] font-semibold leading-[1.1] text-deepsea">
-            Stays, curated
-          </h2>
-          <p className="mx-auto mt-5 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
-            Seasonal packages — fishing weeks, whale season, family stays — are
-            on their way. This space is built and waiting for them.
-          </p>
-          <div className="mt-9 rounded-2xl border border-dashed border-teal/35 bg-white p-12">
-            <div className="font-heading text-xs font-medium uppercase tracking-[0.08em] text-deepsea/50">
-              Packages module — content coming soon
-            </div>
+      <div className="section container-px">
+        <div className="inner">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <div className="eyebrow mb-6">08 — Stays</div>
+            <h2 className="font-heading text-[clamp(1.9rem,4.2vw,3rem)] font-semibold leading-[1.1] text-deepsea">
+              Stays, curated
+            </h2>
+            <p className="mx-auto mt-5 max-w-lg font-body text-[17px] leading-relaxed text-deepsea/70">
+              However you like to travel, we'll help you shape the stay around it.
+              Tell us your dates and we'll do the rest.
+            </p>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            {stays.map((s, i) => (
+              <Reveal key={s.title} delay={i * 90}>
+                <article className="card flex h-full flex-col p-7 hover:-translate-y-1 hover:shadow-lift">
+                  <div className="font-heading text-[11px] font-semibold uppercase tracking-[0.16em] text-coral">
+                    {s.when}
+                  </div>
+                  <h3 className="mt-2 font-heading text-2xl font-semibold text-deepsea">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 flex-1 font-body text-[15px] leading-relaxed text-deepsea/65">
+                    {s.blurb}
+                  </p>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-block font-heading text-xs font-semibold uppercase tracking-[0.14em] text-teal transition hover:text-coral"
+                  >
+                    Enquire about this stay →
+                  </a>
+                </article>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -618,7 +727,7 @@ function BookConnect() {
             </a>
           </div>
           <div className="mt-6 font-body text-sm text-mist/70">
-            Booking via Booking.com · WhatsApp +27 82 374 4676
+            Booking via Booking.com · WhatsApp {site.whatsappDisplay}
           </div>
         </Reveal>
       </div>

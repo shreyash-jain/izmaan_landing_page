@@ -21,7 +21,7 @@ export default function JournalIndex() {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="top">
         {/* header */}
         <section className="container-px pb-4 pt-32">
           <div className="inner max-w-3xl">

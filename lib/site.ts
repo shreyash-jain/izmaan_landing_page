@@ -19,8 +19,23 @@ export const site = {
   //   +27 82 374 4676  (South Africa)  ·  +258 84 570 5769 (Mozambique)
   // Using the SA number, as in the approved design. Swap here if needed.
   whatsappNumber: "27823744676",
+  // Human-readable form of whatsappNumber — used anywhere the number is shown.
+  // Keep in sync with whatsappNumber above (single source for the displayed value).
+  whatsappDisplay: "+27 82 374 4676",
   whatsappText:
     "Hi Izmaan Lodge, I'd love to enquire about a stay in Pomene.",
+
+  // Location — Pomene peninsula, Inhambane Province, Mozambique.
+  // Coordinates are the Pomene area (approximate) for the map link + schema.
+  // ⚠️ Replace with the lodge's exact pin before launch if available.
+  geo: { lat: -22.9226, lng: 35.5806, approximate: true },
+  address: {
+    locality: "Pomene",
+    region: "Inhambane Province",
+    country: "Mozambique",
+    countryCode: "MZ",
+  },
+  nearestAirport: "Vilankulo (VNX) — approx. 106 km",
 
   social: {
     facebook: "https://www.facebook.com/izmaanlodge",
@@ -37,6 +52,9 @@ export const site = {
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
   site.whatsappText
 )}`;
+
+// Google Maps link centred on the lodge's coordinates (opens in the user's map app).
+export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${site.geo.lat},${site.geo.lng}`;
 
 // Full set — used in the footer and the mobile menu (which have room).
 export const navLinks = [

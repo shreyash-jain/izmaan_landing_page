@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navLinks, headerLinks, site } from "@/lib/site";
 import { AmbientSound } from "./AmbientSound";
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const openBtnRef = useRef<HTMLButtonElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -22,6 +24,22 @@ export function SiteNav() {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  // Drawer a11y: Escape closes it, focus moves into the drawer on open and
+  // returns to the hamburger on close.
+  useEffect(() => {
+    if (!open) return;
+    const openBtn = openBtnRef.current; // hamburger to restore focus to on close
+    closeBtnRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      openBtn?.focus();
     };
   }, [open]);
 
@@ -79,6 +97,7 @@ export function SiteNav() {
 
           {/* mobile hamburger — opens the drawer */}
           <button
+            ref={openBtnRef}
             type="button"
             onClick={() => setOpen(true)}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-teal/25 bg-white/70 lg:hidden"
@@ -96,6 +115,10 @@ export function SiteNav() {
 
       {/* mobile drawer — sibling of the (blurred) header so it covers the full viewport */}
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+        aria-hidden={!open}
         className={`fixed inset-0 z-[70] flex flex-col bg-sand px-6 pb-10 pt-4 transition-opacity duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
@@ -103,6 +126,7 @@ export function SiteNav() {
         <div className="flex items-center justify-between">
           {Wordmark}
           <button
+            ref={closeBtnRef}
             type="button"
             onClick={() => setOpen(false)}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-teal/25 bg-white/70 text-xl text-deepsea"

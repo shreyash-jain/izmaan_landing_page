@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-[80svh] flex-col items-center justify-center px-6 text-center">
+    <main id="top" className="flex min-h-[80svh] flex-col items-center justify-center px-6 text-center">
       <div className="eyebrow">Pomene · Mozambique</div>
       <h1 className="mt-4 font-heading text-5xl font-bold text-deepsea">
         Lost on the dune
