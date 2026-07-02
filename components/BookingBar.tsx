@@ -1,13 +1,23 @@
 "use client";
 
-import { site } from "@/lib/site";
+import { availabilityUrl } from "@/lib/site";
+import { IconWhatsApp } from "./Icons";
 
-// Hero booking bar. Dates/guests are a friendly hand-off to the Booking.com
-// engine, which handles real availability.
+// Hero booking bar. The site has no booking engine, so "Check availability"
+// opens WhatsApp with a pre-filled message to the owner — including the dates
+// and party size the visitor picked — sent from the visitor's own WhatsApp.
 export function BookingBar() {
-  function checkAvailability(e: React.FormEvent) {
+  function checkAvailability(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    window.open(site.bookingUrl, "_blank", "noopener,noreferrer");
+    const f = e.currentTarget;
+    const arrive = (f.elements.namedItem("arrive") as HTMLInputElement | null)?.value;
+    const depart = (f.elements.namedItem("depart") as HTMLInputElement | null)?.value;
+    const guests = (f.elements.namedItem("guests") as HTMLSelectElement | null)?.value;
+    window.open(
+      availabilityUrl({ arrive, depart, guests }),
+      "_blank",
+      "noopener,noreferrer"
+    );
   }
 
   const field =
@@ -43,7 +53,8 @@ export function BookingBar() {
           <option>Whole lodge (8)</option>
         </select>
       </div>
-      <button type="submit" className="btn-coral min-w-[170px] flex-1 !py-3">
+      <button type="submit" className="btn-whatsapp min-w-[190px] flex-1 !py-3">
+        <IconWhatsApp className="h-4 w-4" />
         Check availability
       </button>
     </form>

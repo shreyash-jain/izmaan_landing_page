@@ -52,6 +52,43 @@ export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeUR
   site.whatsappText
 )}`;
 
+// ── Availability enquiry via WhatsApp ───────────────────────────────
+// The site is purely front-end (no booking engine), so "Check availability"
+// pre-fills a WhatsApp message to the owner's number (site.whatsappNumber) from
+// the visitor's own WhatsApp — the owner then replies with real availability.
+// The hero booking bar passes the chosen dates/guests; other buttons send a
+// generic availability enquiry.
+export function availabilityText(opts?: {
+  arrive?: string;
+  depart?: string;
+  guests?: string;
+}): string {
+  const fmt = (iso?: string) => {
+    if (!iso) return "";
+    const d = new Date(iso + "T00:00:00");
+    return isNaN(d.getTime())
+      ? iso
+      : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  };
+  const arrive = fmt(opts?.arrive);
+  const depart = fmt(opts?.depart);
+  const parts = [`Hi ${site.name}, I'd like to check availability for a stay in Pomene.`];
+  if (arrive || depart) parts.push(`Dates: ${arrive || "?"} → ${depart || "?"}`);
+  if (opts?.guests) parts.push(`Guests: ${opts.guests}`);
+  parts.push("Is this available? Thank you!");
+  return parts.join("\n");
+}
+
+export function availabilityUrl(opts?: {
+  arrive?: string;
+  depart?: string;
+  guests?: string;
+}): string {
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+    availabilityText(opts)
+  )}`;
+}
+
 // Google Maps link to the lodge's named listing at its exact pin
 // (opens the "Izmaan Madelaine" place in the user's map app).
 export const mapsUrl = `https://www.google.com/maps/place/Izmaan+Madelaine/@${site.geo.lat},${site.geo.lng},17z`;

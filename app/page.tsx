@@ -16,8 +16,9 @@ import {
   IconWave,
   IconSun,
   IconPin,
+  IconWhatsApp,
 } from "@/components/Icons";
-import { site, whatsappUrl, mapsUrl } from "@/lib/site";
+import { site, whatsappUrl, mapsUrl, availabilityUrl } from "@/lib/site";
 import { img, journalCover } from "@/lib/images";
 import { getAllPostMeta, formatDate } from "@/lib/posts";
 
@@ -718,12 +719,12 @@ function BookConnect() {
             message us and we'll help you plan it.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
-              Check availability →
+            <a href={availabilityUrl()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+              <IconWhatsApp className="h-4 w-4" />
+              Check availability
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-              <span className="h-2 w-2 rounded-full bg-[#0a2a16]" />
-              Enquire on WhatsApp
+            <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
+              Book on Booking.com ↗
             </a>
           </div>
           <div className="mt-6 font-body text-sm text-mist/70">

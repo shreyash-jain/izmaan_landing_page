@@ -3,8 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { navLinks, headerLinks, site } from "@/lib/site";
+import { navLinks, headerLinks, site, availabilityUrl } from "@/lib/site";
 import { AmbientSound } from "./AmbientSound";
+import { IconWhatsApp } from "./Icons";
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -86,11 +87,12 @@ export function SiteNav() {
           <div className="hidden items-center gap-3 lg:flex">
             <AmbientSound compact />
             <a
-              href={site.bookingUrl}
+              href={availabilityUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-coral !px-5 !py-2.5 text-xs"
+              className="btn-whatsapp !px-5 !py-2.5 text-xs"
             >
+              <IconWhatsApp className="h-4 w-4" />
               Check availability
             </a>
           </div>
@@ -151,12 +153,13 @@ export function SiteNav() {
         </ul>
         <div className="mt-auto flex items-center justify-between gap-4 pt-8">
           <a
-            href={site.bookingUrl}
+            href={availabilityUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="btn-coral flex-1"
+            className="btn-whatsapp flex-1"
           >
+            <IconWhatsApp className="h-4 w-4" />
             Check availability
           </a>
           <AmbientSound compact />

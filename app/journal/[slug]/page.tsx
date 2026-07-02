@@ -7,8 +7,9 @@ import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Photo } from "@/components/Photo";
+import { IconWhatsApp } from "@/components/Icons";
 import { journalCover } from "@/lib/images";
-import { site, whatsappUrl } from "@/lib/site";
+import { site, availabilityUrl } from "@/lib/site";
 import { getAllPosts, getPost, formatDate } from "@/lib/posts";
 
 export function generateStaticParams() {
@@ -147,11 +148,12 @@ export default function PostPage({ params }: { params: { slug: string } }) {
               We'll help you plan every step — the drive, the dates, the season.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
+              <a href={availabilityUrl()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+                <IconWhatsApp className="h-4 w-4" />
                 Check availability
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-teal">
-                Message us
+              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
+                Book on Booking.com ↗
               </a>
             </div>
           </div>
