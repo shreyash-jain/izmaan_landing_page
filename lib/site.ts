@@ -26,9 +26,8 @@ export const site = {
     "Hi Izmaan Lodge, I'd love to enquire about a stay in Pomene.",
 
   // Location — Pomene peninsula, Inhambane Province, Mozambique.
-  // Coordinates are the Pomene area (approximate) for the map link + schema.
-  // ⚠️ Replace with the lodge's exact pin before launch if available.
-  geo: { lat: -22.9226, lng: 35.5806, approximate: true },
+  // Exact pin from the lodge's Google listing ("Izmaan Madelaine").
+  geo: { lat: -22.9288118, lng: 35.6012083, approximate: false },
   address: {
     locality: "Pomene",
     region: "Inhambane Province",
@@ -53,8 +52,9 @@ export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeUR
   site.whatsappText
 )}`;
 
-// Google Maps link centred on the lodge's coordinates (opens in the user's map app).
-export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${site.geo.lat},${site.geo.lng}`;
+// Google Maps link to the lodge's named listing at its exact pin
+// (opens the "Izmaan Madelaine" place in the user's map app).
+export const mapsUrl = `https://www.google.com/maps/place/Izmaan+Madelaine/@${site.geo.lat},${site.geo.lng},17z`;
 
 // Full set — used in the footer and the mobile menu (which have room).
 export const navLinks = [

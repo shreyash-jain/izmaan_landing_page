@@ -3,28 +3,28 @@
 import { useEffect, useState } from "react";
 
 // ── Shared ambient-ocean engine (module-level singleton) ──────────────
-// One AudioContext for the whole page; desktop + mobile buttons share it.
-// Generative filtered "brown" noise = distant surf.
+// One AudioContext for the whole page; the desktop nav + mobile drawer
+// buttons share it. Generative filtered "brown" noise = distant surf.
 //
 // Signal chain:  noise → lowpass → swell(gain, LFO-modulated) → master → out
-// The level (off/low/full) rides the MASTER gain, which the LFO never
-// touches — so "off" is genuinely silent and levels are exact.
 //
-// Levels:  land → LOW (20%);  tap → FULL (100%);  tap → OFF;  tap → LOW …
+// Two states only:  ON (≈50%, the maximum) or MUTED.
+// It tries to start the moment the visitor lands. Browsers block audio until
+// the first user gesture, so where autoplay is refused it starts on the first
+// interaction (scroll / tap / key) instead — as close to "on landing" as the
+// platform allows. Once the visitor mutes, it never auto-starts again.
 
-type Level = "off" | "low" | "full";
+type Level = "off" | "on";
 type Engine = { ctx: AudioContext; master: GainNode };
 
-const FULL = 0.1; // "100%" — a comfortable full ambient level
-const VOL: Record<Level, number> = {
-  off: 0.0001,
-  low: FULL * 0.2, // "20%"
-  full: FULL,
-};
+// "50%" — the capped comfortable level (previously the engine went to 0.1 at
+// "100%"; the ceiling is now half that).
+const ON_GAIN = 0.05;
+const VOL: Record<Level, number> = { off: 0.0001, on: ON_GAIN };
 
 let engine: Engine | null = null;
 let level: Level = "off";
-let userToggled = false; // once they tap, stop auto-starting
+let userMuted = false; // once the visitor mutes, stop auto-starting
 const subs = new Set<(l: Level) => void>();
 
 function notify() {
@@ -97,24 +97,34 @@ async function setLevel(next: Level, dur: number) {
   notify();
 }
 
-// button cycle: low → full → off → low
-function cycle() {
-  userToggled = true;
-  if (level === "low") setLevel("full", 1.1);
-  else if (level === "full") setLevel("off", 0.5);
-  else setLevel("low", 1.6);
+// Button: a simple mute toggle.
+function toggle() {
+  if (level === "on") {
+    userMuted = true;
+    setLevel("off", 0.5);
+  } else {
+    userMuted = false;
+    setLevel("on", 1.1);
+  }
 }
 
-// Browsers block audio before a gesture — fade LOW (20%) in on first interaction.
+// Start at 50% as soon as the page loads. Where the browser refuses autoplay,
+// the context stays suspended (silent) until the first gesture resumes it.
 let autostartInstalled = false;
 function installAutostart() {
   if (autostartInstalled || typeof window === "undefined") return;
   autostartInstalled = true;
+
+  // Immediate attempt — succeeds where autoplay is permitted.
+  if (!userMuted) setLevel("on", 2.0);
+
   const evts = ["pointerdown", "keydown", "touchstart", "wheel", "scroll"];
   const handler = (e: Event) => {
     const el = e.target as HTMLElement | null;
     if (el && el.closest && el.closest("[data-ambient]")) return; // button handles itself
-    if (!userToggled && level === "off") setLevel("low", 2.4);
+    // resume if we're muted-by-browser (suspended) or not yet playing
+    const suspended = engine?.ctx.state === "suspended";
+    if (!userMuted && (level === "off" || suspended)) setLevel("on", 1.6);
     evts.forEach((ev) => window.removeEventListener(ev, handler));
   };
   evts.forEach((ev) => window.addEventListener(ev, handler, { passive: true }));
@@ -138,14 +148,10 @@ export function AmbientSound({ compact = false }: { compact?: boolean }) {
 
   if (!ready) return null;
 
-  const active = lvl !== "off";
-  const full = lvl === "full";
-  const label =
-    lvl === "off"
-      ? "Ambient waves off — tap to play"
-      : lvl === "low"
-      ? "Ambient waves 20% — tap for full"
-      : "Ambient waves 100% — tap to mute";
+  const on = lvl === "on";
+  const label = on
+    ? "Ocean waves playing (50%) — tap to mute"
+    : "Ocean waves muted — tap to play";
 
   const wave = (
     <svg
@@ -161,7 +167,7 @@ export function AmbientSound({ compact = false }: { compact?: boolean }) {
     >
       <path d="M3 13c2 0 2-1.6 4-1.6S9 13 11 13s2-1.6 4-1.6S17 13 19 13s2-1.6 2-1.6" />
       <path d="M3 17.5c2 0 2-1.6 4-1.6s2 1.6 4 1.6 2-1.6 4-1.6 2 1.6 4 1.6" />
-      {lvl === "off" && <path d="M4 4l16 16" stroke="currentColor" />}
+      {!on && <path d="M4 4l16 16" stroke="currentColor" />}
     </svg>
   );
 
@@ -170,19 +176,20 @@ export function AmbientSound({ compact = false }: { compact?: boolean }) {
       <button
         type="button"
         data-ambient
-        onClick={cycle}
+        onClick={toggle}
         aria-label={label}
+        aria-pressed={on}
         title={label}
         className={`relative flex h-10 w-10 items-center justify-center rounded-full border transition ${
-          active
+          on
             ? "border-teal/40 bg-teal/10 text-teal"
             : "border-teal/25 bg-white/60 text-deepsea/50 hover:border-teal hover:text-teal"
         }`}
       >
         {wave}
-        {active && (
+        {on && (
           <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-teal">
-            {full && <span className="absolute inset-0 animate-ping rounded-full bg-teal/60" />}
+            <span className="absolute inset-0 animate-ping rounded-full bg-teal/60" />
           </span>
         )}
       </button>
@@ -193,13 +200,14 @@ export function AmbientSound({ compact = false }: { compact?: boolean }) {
     <button
       type="button"
       data-ambient
-      onClick={cycle}
+      onClick={toggle}
       aria-label={label}
+      aria-pressed={on}
       title={label}
       className="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-white/60 px-3.5 py-2 font-heading text-[10px] font-semibold uppercase tracking-[0.14em] text-deepsea/70 transition hover:border-teal hover:text-teal"
     >
-      <span className={active ? "text-teal" : ""}>{wave}</span>
-      {lvl === "off" ? "Waves" : lvl === "low" ? "Waves 20%" : "Waves 100%"}
+      <span className={on ? "text-teal" : ""}>{wave}</span>
+      {on ? "Waves 50%" : "Waves off"}
     </button>
   );
 }
