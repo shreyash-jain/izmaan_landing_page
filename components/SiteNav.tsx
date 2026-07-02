@@ -90,10 +90,11 @@ export function SiteNav() {
               href={availabilityUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp !px-5 !py-2.5 text-xs"
+              aria-label="Check availability on WhatsApp"
+              title="Check availability on WhatsApp"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-soft transition hover:scale-105"
             >
-              <IconWhatsApp className="h-4 w-4" />
-              Check availability
+              <IconWhatsApp className="h-5 w-5" />
             </a>
           </div>
 
