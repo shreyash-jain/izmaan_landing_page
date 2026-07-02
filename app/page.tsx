@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
-import { BookingFloat } from "@/components/BookingFloat";
+import { FloatButtons } from "@/components/FloatButtons";
 import { BookingBar } from "@/components/BookingBar";
 import { Gallery } from "@/components/Gallery";
 import { Reveal } from "@/components/Reveal";
@@ -93,7 +93,7 @@ export default function HomePage() {
         <BookConnect />
       </main>
       <Footer />
-      <BookingFloat />
+      <FloatButtons />
     </>
   );
 }

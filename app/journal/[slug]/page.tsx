@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
-import { BookingFloat } from "@/components/BookingFloat";
+import { FloatButtons } from "@/components/FloatButtons";
 import { Photo } from "@/components/Photo";
 import { IconWhatsApp } from "@/components/Icons";
 import { journalCover } from "@/lib/images";
@@ -160,7 +160,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         </article>
       </main>
       <Footer />
-      <BookingFloat />
+      <FloatButtons />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
