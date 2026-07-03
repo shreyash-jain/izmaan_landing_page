@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
-import { FloatButtons } from "@/components/FloatButtons";
 import { Reveal } from "@/components/Reveal";
 import { Photo } from "@/components/Photo";
 import { journalCover } from "@/lib/images";
@@ -83,7 +82,6 @@ export default function JournalIndex() {
         </section>
       </main>
       <Footer />
-      <FloatButtons />
     </>
   );
 }

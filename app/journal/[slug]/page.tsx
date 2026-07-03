@@ -5,7 +5,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
-import { FloatButtons } from "@/components/FloatButtons";
 import { Photo } from "@/components/Photo";
 import { IconWhatsApp } from "@/components/Icons";
 import { journalCover } from "@/lib/images";
@@ -152,15 +151,11 @@ export default function PostPage({ params }: { params: { slug: string } }) {
                 <IconWhatsApp className="h-4 w-4" />
                 Check availability
               </a>
-              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
-                Book on Booking.com ↗
-              </a>
             </div>
           </div>
         </article>
       </main>
       <Footer />
-      <FloatButtons />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}

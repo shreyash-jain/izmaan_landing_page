@@ -49,7 +49,7 @@ sitemap automatically.
 ## Images
 
 - **Real lodge photos** live in `public/images/lodge/` + `lodge-real-*.jpg`
-  (owner originals from the Booking.com gallery and the LAM/Índico press feature).
+  (owner originals from the owners' online listing and the LAM/Índico press feature).
 - **Atmosphere/AI images** (ocean, reef, activities, blog covers) live in
   `public/images/`. See `AI-IMAGE-PROMPTS.md` for the Gemini prompt pack — generate,
   drop in over the same filename, rebuild.
@@ -57,7 +57,9 @@ sitemap automatically.
 
 ## Launch-critical config — `lib/site.ts`
 
-- **Booking** → Booking.com listing link (client-supplied).
+- **Bookings & availability** → all handled over WhatsApp (no third-party
+  booking engine). "Check availability" pre-fills a WhatsApp message to the
+  owner from the visitor's own phone.
 - **WhatsApp** → ⚠️ currently `+27 82 374 4676` (SA). KT also lists `+258 84 570
   5769` (MZ) — verify before launch.
 - **Brand name / canonical URL** → `Izmaan Lodge` / `https://izmaan.co.za`.

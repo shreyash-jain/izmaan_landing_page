@@ -41,11 +41,6 @@ export function Footer() {
           </div>
           <ul className="mt-4 flex flex-col gap-3 font-body text-sm text-mist/80">
             <li>
-              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-sand">
-                Book — Booking.com ↗
-              </a>
-            </li>
-            <li>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-sand">
                 WhatsApp ↗
               </a>

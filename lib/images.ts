@@ -1,8 +1,8 @@
 // Central image manifest.
 //
 // LODGE & ROOM photos (real) — the owners' own photographs, sourced from their
-// official listings: the Booking.com gallery (cf.bstatic.com) and the LAM /
-// Revista Índico press feature. These are genuine Iz-Ma-An Lodge images.
+// official online listing and the LAM / Revista Índico press feature. These
+// are genuine Iz-Ma-An Lodge images.
 //
 // ATMOSPHERE photos (ocean / reef / wildlife / activities) — licensed Unsplash
 // imagery used only for surrounding location & activity context, per KT rules.
@@ -11,7 +11,7 @@
 
 export type Img = { src: string; alt: string; ownerSlot?: boolean };
 
-const L = "/images/lodge"; // real lodge photos (Booking.com + press feature)
+const L = "/images/lodge"; // real lodge photos (owner listing + press feature)
 
 export const img = {
   // ── Hero (AI-generated coastal hero, or fallback beach photo) ───────
@@ -45,7 +45,7 @@ export const img = {
   blowholes: { src: "/images/wave.jpg", alt: "Sea surging through rocks at the point" },
   mangroves: { src: "/images/mangrove.jpg", alt: "Quiet mangrove channels behind the peninsula" },
 
-  // ── Gallery — all real Iz-Ma-An Lodge photos (8 from Booking.com + 2 press) ──
+  // ── Gallery — all real Iz-Ma-An Lodge photos (8 from the owner listing + 2 press) ──
   gallery: [
     { src: `${L}/724091683.jpg`, alt: "Iz-Ma-An Lodge on the dune with the ocean beyond" },
     { src: `${L}/720380574.jpg`, alt: "The lodge unit with its blue wraparound balcony" },

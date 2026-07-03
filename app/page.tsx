@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
-import { FloatButtons } from "@/components/FloatButtons";
 import { BookingBar } from "@/components/BookingBar";
 import { Gallery } from "@/components/Gallery";
 import { Reveal } from "@/components/Reveal";
@@ -93,7 +92,6 @@ export default function HomePage() {
         <BookConnect />
       </main>
       <Footer />
-      <FloatButtons />
     </>
   );
 }
@@ -715,20 +713,17 @@ function BookConnect() {
           </h2>
           <p className="mx-auto mt-6 max-w-md font-body text-[17px] leading-relaxed text-mist/90">
             Madelaine's wish is simple — that guests become almost like family,
-            and keep coming back. Check dates with our booking partner, or just
-            message us and we'll help you plan it.
+            and keep coming back. Message us and we'll help you plan every
+            detail of your stay.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <a href={availabilityUrl()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
               <IconWhatsApp className="h-4 w-4" />
               Check availability
             </a>
-            <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-coral">
-              Book on Booking.com ↗
-            </a>
           </div>
           <div className="mt-6 font-body text-sm text-mist/70">
-            Booking via Booking.com · WhatsApp {site.whatsappDisplay}
+            Enquiries &amp; bookings on WhatsApp {site.whatsappDisplay}
           </div>
         </Reveal>
       </div>

@@ -11,10 +11,6 @@ export const site = {
     "A luxury self-catering beachfront lodge on a dune above the Indian Ocean in Pomene, Mozambique. Four en-suite bedrooms across two units, solar-powered, 100m from white sand.",
   url: "https://izmaan.co.za",
 
-  // Booking engine — Booking.com listing (client-supplied link).
-  bookingUrl:
-    "https://www.booking.com/hotel/mz/izmaan-lodge-pomene.en-gb.html?label=gen173nr-10CAsoogFCE2l6bWFhbi1sb2RnZS1wb21lbmVIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AqDJ-dEGwAIB0gIkYTg3NDJkMTAtY2ZiYi00MzA4LWJlMjQtMDc1ZDIzYjgzODJi2AIB4AIB&sid=1ff73efaedfbebae15dd643171487e38&dist=0&keep_landing=1&sb_price_type=total&type=total&",
-
   // ⚠️ VERIFY BEFORE LAUNCH (KT flags two numbers):
   //   +27 82 374 4676  (South Africa)  ·  +258 84 570 5769 (Mozambique)
   // Using the SA number, as in the approved design. Swap here if needed.
