@@ -52,6 +52,31 @@ Calm open turquoise ocean off Mozambique at sunrise, a humpback whale's tail
 serene and expansive. [+ shared style spec] 16:9.
 ```
 
+**`public/images/blog/whale-watching-pomene-mozambique.jpg`** (cover)
+```
+A humpback whale breaching clear of glassy deep teal-green water off a remote
+Mozambican coastline, white spray frozen mid-air, empty white-sand beach and
+dune scrub visible in the soft-focus foreground as if watched from the shore,
+early golden-hour light. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/whale-watching-pomene-mozambique-blow.jpg`** (body — "From the beach" section)
+```
+View from an empty white-sand beach at dawn: far out on a flat, glassy
+turquoise sea, a humpback whale's blow — a tall white puff of spray — hangs in
+the still air, the whale's dark back just breaking the surface beneath it.
+Vast calm ocean, soft pastel morning sky, sense of quiet scale and distance.
+[+ shared style spec] 16:9.
+```
+
+**`public/images/blog/whale-watching-pomene-mozambique-mother-calf.jpg`** (body — "Why the whales come here" section)
+```
+A humpback whale mother swimming just beneath the surface of clear, warm
+turquoise water with her small calf close alongside, seen from slightly above,
+sunbeams filtering through the water, gentle and protective mood, deep
+teal-green open ocean fading below. [+ shared style spec] 16:9.
+```
+
 ---
 
 ## 3. Homepage — hero & story
