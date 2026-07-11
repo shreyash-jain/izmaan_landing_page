@@ -84,7 +84,7 @@ Look for:
 
 ### From the water
 
-Divers and snorkellers off Pomene in season sometimes get the eeriest encounter of all: **whale song**, carrying underwater for kilometres — you feel it in your chest before you work out what it is. If you're on a boat while whales are about, the rule is simple and non-negotiable: keep your distance, never chase or cut across a whale's path, and let curious animals close the gap themselves. Mothers with calves get extra space, always.
+Divers and snorkellers off Pomene in season sometimes get the most otherworldly encounter of all: **whale song**, carrying underwater for kilometres — you feel it in your chest before you work out what it is. If you're on a boat while whales are about, the rule is simple and non-negotiable: keep your distance, never chase or cut across a whale's path, and let curious animals close the gap themselves. Mothers with calves get extra space, always.
 
 > The whales made this coastline their nursery long before anyone built a lodge on it. We're the guests here.
 
