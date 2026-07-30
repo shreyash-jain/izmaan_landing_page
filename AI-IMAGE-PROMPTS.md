@@ -77,6 +77,48 @@ sunbeams filtering through the water, gentle and protective mood, deep
 teal-green open ocean fading below. [+ shared style spec] 16:9.
 ```
 
+**`public/images/blog/diving-snorkelling-pomene.jpg`** (cover)
+```
+A single scuba diver hovering above a healthy, untouched coral reef in bright,
+clear turquoise-to-deep-teal water off a remote Mozambican coast, colourful reef
+fish shoaling over the coral, strong shafts of sunlight from the surface above,
+vast open blue beyond the reef edge, pristine and uncrowded.
+[+ shared style spec] 16:9.
+```
+
+**`public/images/blog/diving-snorkelling-pomene-reef.jpg`** (body — "Why the reefs off Pomene are still untouched")
+```
+Close underwater view of a thriving untouched coral garden in clear blue water:
+hard and soft corals in natural muted colour, dense shoals of small colourful
+reef fish, a sea turtle grazing at the edge of frame, dappled sunlight rays
+filtering down, no divers, no bubbles. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/diving-snorkelling-pomene-snorkel-beach.jpg`** (body — "Snorkelling in Pomene — straight off the beach")
+```
+Over-under (split-level) photograph in clear shallow turquoise water just off an
+empty white-sand beach: below the waterline, coral heads and bright reef fish in
+sunlit shallows; above it, a flat calm sea, white sand, dune scrub and a bright
+morning sky. Sharp, luminous, no people. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/diving-snorkelling-pomene-turtle.jpg`** (body — "What you'll see")
+```
+A green sea turtle grazing calmly on a coral reef in clear sunlit turquoise
+water, seen from the side and slightly above; a single snorkeller silhouetted at
+the surface in the soft-focus background, keeping a respectful distance, not
+reaching toward the animal. Peaceful, unhurried, wild. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/diving-snorkelling-pomene-gear.jpg`** (body — "What to bring")
+```
+Flat-lay of snorkelling and dive gear arranged on clean white sand: mask,
+snorkel, fins, reef shoes, rash vest, mesh drawstring bag and a dive computer,
+warm golden side light casting soft shadows, calm turquoise sea and empty beach
+blurred behind. Documentary, uncluttered, no brand logos, no text.
+[+ shared style spec] 16:9.
+```
+
 ---
 
 ## 3. Homepage — hero & story

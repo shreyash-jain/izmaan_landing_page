@@ -81,7 +81,7 @@ An off-grid, dark-sky beach like Pomene's is exactly what hatchlings need: they 
 Pomene's reputation was built on its **reef and game fishing**, and it holds up all year. It's the reason many families first discovered the area decades ago.
 
 ### Diving & snorkelling — year-round
-Warm water and a reef close to shore make for excellent, uncrowded diving and snorkelling in every season. Visibility is generally best on calmer days.
+Warm water and a reef close to shore make for excellent, uncrowded diving and snorkelling in every season. Visibility is generally best on calmer days. For reef conditions, beach entries and what to pack, see our guide to **[diving and snorkelling in Pomene](/journal/diving-snorkelling-pomene)**.
 
 ### Kitesurfing — year-round
 Steady cross-shore wind over a wide, empty lagoon gives consistent, uncrowded conditions whenever you visit.

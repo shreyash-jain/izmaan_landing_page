@@ -82,7 +82,7 @@ For a full month-by-month breakdown of weather, wildlife and water conditions, s
 For a place this quiet, the days fill themselves.
 
 ### Diving and snorkelling
-The reef sits close to shore, in warm, clear water off a coast few divers ever reach. Snorkellers can step almost straight off the beach into coral gardens and shoals of reef fish.
+The reef sits close to shore, in warm, clear water off a coast few divers ever reach. Snorkellers can step almost straight off the beach into coral gardens and shoals of reef fish. Full detail — reefs, tides, marine life and gear — is in our **[diving and snorkelling in Pomene](/journal/diving-snorkelling-pomene)** guide.
 
 ### Fishing
 Pomene is known up the coast for its **reef and game fishing** — it's the reason many families first came here decades ago, and the reason they keep coming back.
