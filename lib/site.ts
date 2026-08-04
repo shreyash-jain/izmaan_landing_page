@@ -41,6 +41,20 @@ export const site = {
       "https://www.indico-lam.com/en/2020/12/17/iz-ma-an-lodge-with-an-open-mind",
   },
 
+  // Google Analytics 4 measurement ID for the tracking tag.
+  // Public by design — it ships in the page source of every GA-tracked site —
+  // so it lives here rather than in an environment variable. That matters
+  // because this is a static export: an ID supplied only via env has to be set
+  // separately on every host environment (Cloudflare keeps Production and
+  // Preview as separate lists), and if it's missed the tag simply never ships
+  // and no data is ever collected — silently. NEXT_PUBLIC_GA_MEASUREMENT_ID
+  // still overrides this if you need a different property for a test build.
+  //
+  // NOT to be confused with GOOGLE_ANALYTICS_PROPERTY_ID (a ~9-digit number),
+  // which the /admin dashboard uses to read data back out. Different value,
+  // different purpose, and that one is a secret-adjacent server-side setting.
+  gaMeasurementId: "G-FYGG0Q0411",
+
   builtBy: "Vidyayatan Technologies",
 } as const;
 

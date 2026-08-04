@@ -64,6 +64,43 @@ sitemap automatically.
   5769` (MZ) — verify before launch.
 - **Brand name / canonical URL** → `Izmaan Lodge` / `https://izmaan.co.za`.
 
+## Analytics dashboard — `/admin`
+
+A password-gated dashboard showing how the journal is performing: readers,
+pageviews, engagement, a 30-day trend, device / channel / country splits, and a
+per-post leaderboard.
+
+The site is a **static export**, so there is no Next.js server and no API route.
+The data comes from a **Cloudflare Pages Function** at
+[`functions/api/analytics.ts`](functions/api/analytics.ts), which Pages deploys
+alongside the static build. It signs a service-account JWT and calls the GA4
+Data API over plain `fetch` — deliberately not the official
+`@google-analytics/data` SDK, which speaks gRPC and cannot run on Workers.
+
+**With no credentials set it serves seeded demo data behind a "DEMO DATA"
+banner**, so the dashboard is reviewable before the Google account exists. Adding
+the environment variables switches it to live data with no code change.
+
+```bash
+cp .env.example .env.local   # fill in
+npm run verify:ga            # proves key parses → token issues → runReport 200
+npm run build
+npx wrangler pages dev dist  # runs the Function locally, unlike `npm start`
+```
+
+Cloudflare Pages settings: build command `npm run build`, output directory
+`dist`. Set the environment variables under **Settings → Environment variables**
+— note Production and Preview are *separate lists*, so a preview showing demo
+data says nothing about production.
+
+⚠️ **Two GA4 setup steps are easy to miss:**
+1. The service account must be added in GA4 → Admin → **Property access
+   management** with the **Viewer** role. Without it you get `403
+   PERMISSION_DENIED` even though the token issues fine.
+2. Set **data retention to 14 months** (Admin → Data collection and modification
+   → Data retention). The default is 2 months, and it only applies going
+   forward — expired event-level data cannot be recovered.
+
 ## SEO
 
 Per-page metadata, `sitemap.ts`, `robots.ts`, Article + FAQPage JSON-LD,
