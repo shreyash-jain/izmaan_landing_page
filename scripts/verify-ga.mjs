@@ -13,7 +13,10 @@ const SCOPE = "https://www.googleapis.com/auth/analytics.readonly";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 
 // ── minimal .env loader (no dependency needed) ──────────────────────────
-for (const file of [".env.local", ".env"]) {
+// .dev.vars first: that's what `wrangler pages dev` reads, so checking the
+// same file the local server uses means a pass here proves the server will
+// work too, rather than testing a second copy that could have drifted.
+for (const file of [".dev.vars", ".env.local", ".env"]) {
   if (!existsSync(file)) continue;
   for (const line of readFileSync(file, "utf8").split(/\r?\n/)) {
     const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)$/);
@@ -152,13 +155,35 @@ const reportRes = await fetch(
 );
 
 if (reportRes.status === 403) {
+  const raw = await reportRes.text().catch(() => "");
+  // Two very different failures both return 403, and confusing them sends you
+  // to the wrong console for an hour. Tell them apart by the message body.
+  const apiDisabled =
+    /SERVICE_DISABLED|has not been used in project|is disabled/i.test(raw);
+
+  console.log(`\n  \x1b[2mGoogle said:\x1b[0m ${raw.slice(0, 400)}\n`);
+
+  if (apiDisabled) {
+    const project = raw.match(/project[s]?[\/ ]([a-z0-9-]+)/i)?.[1];
+    die(
+      "403 — the Google Analytics Data API is not enabled for this project.",
+      "This is NOT a property-access problem: the service account can see the\n" +
+        "    property fine. The API itself is switched off in Google Cloud.\n\n" +
+        `    Go to: https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com${
+          project ? `?project=${project}` : ""
+        }\n` +
+        "    Click ENABLE, wait ~1 minute for it to propagate, then re-run this."
+    );
+  }
+
   die(
-    "403 PERMISSION_DENIED.",
+    "403 PERMISSION_DENIED — the service account cannot read this property.",
     "The credentials are valid — the token issued fine — but the service " +
       `account has no access to property ${propertyId}. In GA4: Admin → ` +
       `Property access management → + → add ${clientEmail} with the Viewer ` +
-      "role, and untick 'Notify new users by email'. This step is the one " +
-      "almost everyone misses."
+      "role, and untick 'Notify new users by email'.\n\n" +
+      "    Tip: run `npm run ga:properties` — if it lists the property, access " +
+      "is fine\n    and the problem is the Data API being disabled instead."
   );
 }
 

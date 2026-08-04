@@ -62,7 +62,8 @@ sitemap automatically.
   owner from the visitor's own phone.
 - **WhatsApp** → ⚠️ currently `+27 82 374 4676` (SA). KT also lists `+258 84 570
   5769` (MZ) — verify before launch.
-- **Brand name / canonical URL** → `Izmaan Lodge` / `https://izmaan.co.za`.
+- **Brand name / canonical URL** → `Izmaan Lodge` / `https://izmaanlodge.co`.
+  (`izmaan.co.za` is the old single-page site this rebuild replaces — not ours.)
 
 ## Analytics dashboard — `/admin`
 
