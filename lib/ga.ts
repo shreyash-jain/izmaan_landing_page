@@ -186,6 +186,16 @@ export async function runReport(
   if (!res.ok) {
     const text = await res.text().catch(() => "");
     if (res.status === 403) {
+      // Two unrelated problems both surface as 403 here, and pointing at the
+      // wrong one sends you to the wrong console. Distinguish them.
+      if (/SERVICE_DISABLED|has not been used in project|is disabled/i.test(text)) {
+        throw new Error(
+          `The Google Analytics Data API is not enabled in this Google Cloud ` +
+            `project. This is not a permissions problem — enable it at ` +
+            `console.cloud.google.com/apis/library/analyticsdata.googleapis.com ` +
+            `and wait a minute for it to propagate. ${text}`
+        );
+      }
       throw new Error(
         `403 PERMISSION_DENIED from the GA4 Data API. The token issued fine, so ` +
           `the credentials are valid — but the service account has not been added ` +

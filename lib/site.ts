@@ -9,7 +9,12 @@ export const site = {
   location: "Pomene · Mozambique",
   description:
     "A luxury self-catering beachfront lodge on a dune above the Indian Ocean in Pomene, Mozambique. Four en-suite bedrooms across two units, solar-powered, 100m from white sand.",
-  url: "https://izmaan.co.za",
+  // The live domain. Drives every canonical URL, the whole sitemap, the OG
+  // tags and the robots.txt sitemap reference — so it has to match the domain
+  // the site is actually served from, or Google discards the sitemap as
+  // cross-domain and the canonicals point at someone else's site.
+  // Note: izmaan.co.za is the OLD single-page site this rebuild replaces.
+  url: "https://izmaanlodge.co",
 
   // ⚠️ VERIFY BEFORE LAUNCH (KT flags two numbers):
   //   +27 82 374 4676  (South Africa)  ·  +258 84 570 5769 (Mozambique)

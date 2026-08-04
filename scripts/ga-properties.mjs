@@ -17,7 +17,8 @@ const SCOPE = "https://www.googleapis.com/auth/analytics.readonly";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 
 function loadEnvFiles() {
-  for (const file of [".env.local", ".env"]) {
+  // .dev.vars first — the same file `wrangler pages dev` reads.
+  for (const file of [".dev.vars", ".env.local", ".env"]) {
     if (!existsSync(file)) continue;
     for (const line of readFileSync(file, "utf8").split(/\r?\n/)) {
       const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)$/);
