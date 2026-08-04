@@ -5,13 +5,18 @@
   "description": "Izmaan Lodge — luxury self-catering beachfront lodge, Pomene, Mozambique",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/to-dist.mjs",
+    "build": "node scripts/gen-registry.mjs && next build && node scripts/to-dist.mjs",
+    "gen:registry": "node scripts/gen-registry.mjs",
+    "verify:ga": "node scripts/verify-ga.mjs",
+    "ga:properties": "node scripts/ga-properties.mjs",
     "start": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs",
+    "preview:admin": "wrangler pages dev dist --port 8788 --compatibility-date=2024-09-23",
     "lint": "next lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "jose": "^6.2.8",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -29,6 +34,7 @@
     "eslint-config-next": "^14.2.5",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "wrangler": "^4.118.0"
   }
 }
