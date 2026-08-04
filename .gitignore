@@ -35,6 +35,7 @@ yarn-error.log*
 
 # local tooling
 /.claude/
+/.wrangler/
 
 # QA audit output (screenshots / reports from scripts/audit.mjs)
 /.audit/
