@@ -14,6 +14,20 @@ export type RegistryEntry = {
 
 export const POST_REGISTRY: RegistryEntry[] = [
   {
+    "slug": "self-catering-vs-all-inclusive-mozambique",
+    "path": "/journal/self-catering-vs-all-inclusive-mozambique",
+    "title": "Self-Catering vs All-Inclusive in Mozambique: Which Suits Your Trip? (2026)",
+    "category": "Off-Grid",
+    "date": "2026-08-07"
+  },
+  {
+    "slug": "diving-snorkelling-pomene",
+    "path": "/journal/diving-snorkelling-pomene",
+    "title": "Diving & Snorkelling in Pomene: Reefs Few Ever Reach",
+    "category": "Things to Do",
+    "date": "2026-07-30"
+  },
+  {
     "slug": "whale-watching-pomene-mozambique",
     "path": "/journal/whale-watching-pomene-mozambique",
     "title": "Whale Watching in Pomene, Mozambique: When, Where & How to See Humpbacks (2026)",

@@ -119,6 +119,63 @@ blurred behind. Documentary, uncluttered, no brand logos, no text.
 [+ shared style spec] 16:9.
 ```
 
+**`public/images/blog/self-catering-vs-all-inclusive-mozambique.jpg`** (cover)
+```
+A weathered wooden table on white sand at golden hour, laid for a home-cooked
+meal: a whole grilled fish on a board, a bowl of salad, cut limes, simple enamel
+plates and two glasses, turquoise sea and empty beach softly out of focus behind.
+Relaxed, unstyled, end-of-day mood. No people, no building or lodge visible.
+[+ shared style spec] 16:9.
+```
+
+**`public/images/blog/self-catering-vs-all-inclusive-mozambique-catch.jpg`** (body — "Freedom and flexibility")
+```
+Close-up of a just-caught fresh fish on a wooden board beside coarse salt, cut
+limes and a sprig of herbs, next to a simple beach grill with glowing coals,
+white sand underfoot, warm late-afternoon light. Honest and rustic, not
+restaurant-styled. No people, no building visible. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/self-catering-vs-all-inclusive-mozambique-supplies.jpg`** (body — "What's provided vs what you bring")
+```
+The open back of a dusty 4x4 loaded for a remote self-catering trip: a cool box,
+crates of fruit and vegetables, bottled water, dry-goods bags and a coffee tin,
+parked on a soft sand track through coastal dune scrub, bright morning light.
+Practical and real, not staged. No people. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/self-catering-vs-all-inclusive-mozambique-market.jpg`** (body — "How to plan supplies")
+```
+A sunlit open-air market stall in a small coastal Mozambican town: baskets and
+crates of tomatoes, onions, bananas, mangoes and peppers under a shade cloth,
+warm dusty light, bright colours. Documentary travel feel, faces not visible.
+No text or signage. [+ shared style spec] 16:9.
+```
+
+**`public/images/blog/self-catering-vs-all-inclusive-mozambique-solar.jpg`** — ❌ **WITHDRAWN, do not regenerate**
+```
+(Was: solar panels on a raised wooden frame in the dune scrub.)
+
+Wrong: the owners' panels are mounted ON THE LODGE ROOF, not ground-framed.
+Roof-mounted panels are part of the property, so this slot falls under the
+no-AI rule at the top of this file and CANNOT be filled by a generated image.
+It needs a real photo of the roof from the owners. Until one arrives, the
+"Sustainability" section runs without an image.
+```
+
+> ⚠️ This post is *about* the kitchen, so the usual rule matters more than usual:
+> **no AI kitchen, dining room, bedroom or lodge interior.** The post uses the
+> owners' real kitchen photo (`/images/lodge/720379827.jpg`) for that, and the
+> prompts above stay on the surroundings — food, supplies, the shopping run.
+> Add *"no building or lodge visible"* wherever a structure could creep in.
+>
+> ✅ Generated and wired into the post. Like the earlier sets they came out
+> square (1024×1024) — fine in the body, and the **cover** survives the
+> template's 16:9 centre-crop because the laid table sits mid-frame.
+> One blemish: the supplies shot has garbled AI lettering on the mudflap and a
+> sack. Re-render with *"no text, no lettering, no brand marks anywhere"* if it
+> bothers you at full width.
+
 ---
 
 ## 3. Homepage — hero & story
