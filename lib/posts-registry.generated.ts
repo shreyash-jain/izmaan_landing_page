@@ -14,6 +14,13 @@ export type RegistryEntry = {
 
 export const POST_REGISTRY: RegistryEntry[] = [
   {
+    "slug": "turtle-nesting-season-pomene",
+    "path": "/journal/turtle-nesting-season-pomene",
+    "title": "Turtle Nesting Season in Pomene, Mozambique: When and How to See Them (October–March)",
+    "category": "Wildlife",
+    "date": "2026-08-17"
+  },
+  {
     "slug": "self-catering-vs-all-inclusive-mozambique",
     "path": "/journal/self-catering-vs-all-inclusive-mozambique",
     "title": "Self-Catering vs All-Inclusive in Mozambique: Which Suits Your Trip? (2026)",

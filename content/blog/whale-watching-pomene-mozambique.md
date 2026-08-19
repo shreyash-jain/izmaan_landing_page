@@ -37,7 +37,7 @@ This is the guide to **whale watching in Pomene**: when the season runs, why the
 - **Peak:** **late July through September** — the densest numbers and the most breaching, tail-slapping and singing.
 - **No boat needed:** the migration path runs close to shore here. Whales are regularly visible **from the beach and the dune**.
 - **Best conditions:** calm, glassy mornings, and the golden hour before sunset. Bring binoculars.
-- **Bonus overlap:** stay in October and you can catch the last whales *and* the first [nesting turtles](/journal/best-time-to-visit-pomene).
+- **Bonus overlap:** stay in October and you can catch the last whales *and* the first [nesting turtles](/journal/turtle-nesting-season-pomene).
 
 ## When is whale season in Pomene?
 
