@@ -38,7 +38,11 @@ yarn-error.log*
 /Luxury Lodge Website Design-handoff.zip
 
 # local tooling
-/.claude/
+/.claude/*
+# ...but the shared blog workflow command travels with the repo.
+!/.claude/commands/
+/.claude/commands/*
+!/.claude/commands/blog.md
 /.wrangler/
 
 # QA audit output (screenshots / reports from scripts/audit.mjs)
