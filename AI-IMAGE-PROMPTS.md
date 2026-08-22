@@ -178,6 +178,95 @@ It needs a real photo of the roof from the owners. Until one arrives, the
 
 ---
 
+### Turtle nesting season post — ✅ GENERATED & WIRED IN (5 slots)
+
+> ✅ All five generated and in place at 1376×768 (16:9 — no centre-crop damage on
+> the cover). They came out of the generator at 670 KB–1.07 MB each, ~4.3 MB for
+> the page; re-encoded in place with sharp at `quality: 82, mozjpeg` down to
+> **767 KB total** with no visible loss, including in the night shots where
+> banding would show first. Worth doing for any future set — `output: export`
+> means there's no runtime optimizer and the files ship exactly as committed.
+>
+> **These prompts are self-contained — paste them whole.** Do *not* append the
+> shared style spec from §1: three of these are night or first-light scenes and
+> the spec's "bright, airy, sun-drenched, NOT dark" line fights them. The palette
+> and photorealism instructions are already written into each block below.
+>
+> **The two hard rules across the whole set**, because the post is *about* them:
+> **no artificial light anywhere in frame** (no torches, lamps, windows, boats or
+> town glow — a lit beach is the exact thing the article says kills hatchlings),
+> and **no people touching, holding, lifting or standing over a turtle.** A
+> generated image of someone "helping" a hatchling to the sea contradicts the
+> guidance three paragraphs above it.
+
+**1. `public/images/blog/turtle-nesting-season-pomene.jpg`** (cover — 16:9 matters here, the template centre-crops)
+```
+Photorealistic editorial wildlife photography, 35mm look, natural light, gentle
+film grain. A large loggerhead sea turtle crawling back down an empty white-sand
+beach toward calm turquoise water at first light, seen from behind and slightly
+to one side, her wide flipper tracks trailing up the sand behind her. Low dune
+scrub along the top of the beach and an empty horizon — no buildings, no boats,
+no lights. Soft pastel dawn sky, pale coral and gold on the water.
+Colour palette: lagoon turquoise, white sand, deep teal-green water, soft golden
+light. Wild, quiet, documentary — not a postcard. Keep the turtle centred in the
+frame. No people, no text, no logos, no watermark, no borders. 16:9.
+```
+
+**2. `public/images/blog/turtle-nesting-season-pomene-dark-beach.jpg`** (body — "Why Pomene's dark beach is ideal")
+```
+Photorealistic long-exposure night landscape photography, 35mm look, natural
+darkness. A completely empty white-sand beach at night under a clear, star-dense
+sky, the Milky Way arcing overhead, faint moonlight silvering gentle surf, dark
+dune scrub silhouetted behind the beach. Absolutely no artificial light anywhere
+in frame — no lamps, no lit windows, no torches, no buildings, no distant town
+glow on the horizon. Deep teal-blue and indigo tones, luminous stars, pale sand
+just catching starlight. Understated and real, not glowing, not neon, not
+oversaturated. No people, no text, no logos, no watermark, no borders. 16:9.
+```
+
+**3. `public/images/blog/turtle-nesting-season-pomene-nesting-female.jpg`** (body — "Loggerhead vs leatherback")
+```
+Photorealistic night wildlife photography lit only by a bright full moon, 35mm
+look, gentle film grain. A large loggerhead sea turtle high up a dark, empty
+beach in the dry sand, settled into a shallow body pit she has dug, sand banked
+around her, her rear flippers mid-excavation. Seen from behind and low down, at
+a respectful distance — never in front of her head. Dune scrub behind, calm dark
+sea and moonlit surf in the background. Cool silver-blue moonlight, deep shadow,
+sand texture picked out by the low light. No torches, no lamps, no camera flash,
+no artificial light of any kind, no people, no hands, no buildings, no text, no
+logos, no watermark, no borders. 16:9.
+```
+
+**4. `public/images/blog/turtle-nesting-season-pomene-tracks.jpg`** (body — "How to watch responsibly")
+```
+Photorealistic editorial travel photography, 35mm look, high clarity, gentle
+film grain. Fresh sea turtle tracks in smooth white sand at dawn: two parallel
+bands of flipper marks, like wide tractor treads, running from the water's edge
+up to a churned nesting hollow at the top of the beach. Low raking morning light
+across the sand picking out every ridge of the texture. Empty beach, dune grass,
+calm turquoise sea beyond, soft golden light. No turtle in frame — the tracks are
+the subject. No people, no human footprints, no vehicle tracks, no buildings, no
+text, no logos, no watermark, no borders. 16:9.
+```
+
+**5. `public/images/blog/turtle-nesting-season-pomene-hatchlings.jpg`** (body — "Why undeveloped, dark beaches matter")
+```
+Photorealistic wildlife photography, very low camera angle at sand level, shallow
+depth of field, natural first light. A single tiny dark sea turtle hatchling,
+palm-sized, crossing wet packed sand toward the surf, its small trail scribbled
+behind it, a thin sheet of water ahead reflecting the pale pre-sunrise sky. The
+ocean soft and out of focus in the background, white sand, cool turquoise and
+pale gold tones. Fragile, determined, hopeful. Natural light only — no torch, no
+flash, no artificial light. No hands, no people, no buildings, no text, no logos,
+no watermark, no borders. 16:9.
+```
+
+*If a generation comes out looking too "AI" — plasticky sand, glowing water — add:
+"subtle natural colours, realistic, understated documentary travel photography,
+slightly imperfect."*
+
+---
+
 ## 3. Homepage — hero & story
 
 **`public/images/hero.jpg`** (full-bleed hero — favour a 16:9 frame)

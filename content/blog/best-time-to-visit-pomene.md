@@ -75,6 +75,8 @@ Watching is a privilege that comes with rules:
 
 An off-grid, dark-sky beach like Pomene's is exactly what hatchlings need: they navigate to the ocean by the natural glow of the horizon, and artificial light confuses them.
 
+For the month-by-month nesting and hatching windows, and how to watch without doing harm, see our full guide to [turtle nesting season in Pomene](/journal/turtle-nesting-season-pomene).
+
 ## The activity calendar
 
 ### Fishing — year-round
