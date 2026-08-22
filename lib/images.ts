@@ -67,6 +67,7 @@ export const img = {
     "Pack List": { src: "/images/tropical.jpg", alt: "Tropical beach scene" },
     "Off-Grid": { src: "/images/sunrise.jpg", alt: "Off-grid sunrise over the sea" },
     Wildlife: { src: "/images/turtle.jpg", alt: "Sea turtle in clear water" },
+    Families: { src: "/images/beach-aerial2.jpg", alt: "Empty white-sand beach and turquoise shallows at Pomene" },
     default: { src: "/images/beach-turq.jpg", alt: "Pomene coastal scene" },
   } as Record<string, Img>,
 } as const;
