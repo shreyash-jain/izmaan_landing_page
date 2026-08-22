@@ -264,6 +264,27 @@ no watermark, no borders. 16:9.
 *If a generation comes out looking too "AI" — plasticky sand, glowing water — add:
 "subtle natural colours, realistic, understated documentary travel photography,
 slightly imperfect."*
+### Family / whole-lodge post — 🚫 REAL PHOTOS ONLY (prompts retired)
+
+> **Decision (19 Aug 2026):** the post now runs on the **owners' real photographs
+> only** — four slots, no AI imagery, no borrowed atmosphere frames:
+>
+> | Slot | File |
+> | --- | --- |
+> | Cover | `/images/lodge/720380574.jpg` — both units on the dune |
+> | Whole-lodge stay | `/images/lodge/720380618.jpg` — shared dining space |
+> | Self-catering | `/images/lodge/720379827.jpg` — kitchen |
+> | Privacy / rooms | `/images/lodge-real-2.jpg` — bedroom onto the sea |
+>
+> The five AI prompts written for this post (empty beach with distant family,
+> estuary shallows, sandcastle, mangrove kayak, long table at dusk) are **retired**
+> — do not generate them. Two were generated before the decision and are still on
+> disk but **unreferenced**: `family-holiday-mozambique-pomene-beach.jpg` and
+> `family-holiday-mozambique-pomene-estuary-shallows.jpg`. Delete them or keep them
+> as spares; nothing links to them.
+>
+> If more images are wanted here, they have to be the owners' own photos. The one
+> worth asking for: a wide shot of both units **from the beach**.
 
 ---
 

@@ -21,6 +21,13 @@ export const POST_REGISTRY: RegistryEntry[] = [
     "date": "2026-08-17"
   },
   {
+    "slug": "family-holiday-mozambique-pomene",
+    "path": "/journal/family-holiday-mozambique-pomene",
+    "title": "Family Holidays in Mozambique: Whole-Lodge Beach Stays in Pomene for Up to 8",
+    "category": "Families",
+    "date": "2026-08-17"
+  },
+  {
     "slug": "self-catering-vs-all-inclusive-mozambique",
     "path": "/journal/self-catering-vs-all-inclusive-mozambique",
     "title": "Self-Catering vs All-Inclusive in Mozambique: Which Suits Your Trip? (2026)",
