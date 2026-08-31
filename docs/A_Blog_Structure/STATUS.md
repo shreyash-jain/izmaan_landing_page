@@ -10,13 +10,13 @@ say *how*; this says *where we are*.
 > - **Before you leave:** update statuses, record blockers, list the next actions, and
 >   commit your branch.
 
-*Last updated: 2026-08-21.*
+*Last updated: 2026-08-25.*
 
 ---
 
 ## Published posts
 
-Eight Markdown posts in `content/blog/`:
+Nine Markdown posts in `content/blog/`:
 
 | Slug | Notes |
 |---|---|
@@ -28,6 +28,7 @@ Eight Markdown posts in `content/blog/`:
 | `self-catering-vs-all-inclusive-mozambique` | From the plan — 7 Aug 2026 |
 | `turtle-nesting-season-pomene` | From the plan — 17 Aug 2026 |
 | `family-holiday-mozambique-pomene` | From the plan — 17 Aug 2026 |
+| `komatipoort-border-crossing-mozambique` | From the plan — 25 Aug 2026. **In review, PR #14** |
 
 There is no registry to keep in sync — the folder *is* the registry. But
 `lib/posts-registry.generated.ts` must be regenerated (it happens inside `npm run build`)
@@ -37,7 +38,8 @@ and committed whenever a post is added.
 
 | Work | Branch | State | Next action |
 |---|---|---|---|
-| Family / whole-lodge stays | `blog/family-whole-lodge-stays` | Checked out locally | Verify against `origin/main`, build, PR |
+| Komatipoort border crossing | `blog/komatipoort-border-crossing-mozambique` | **PR #14 open, not merged** | Client review, then merge on the manager's word |
+| Family / whole-lodge stays | `blog/family-whole-lodge-stays` | Merged as PR #13 | — |
 | Blog docs standardisation | *(this folder)* | Uncommitted | Commit `docs/A_Blog_Structure/` + `.claude/commands/blog.md` + the `.gitignore` change that lets the command be tracked |
 
 ## The plan
@@ -51,6 +53,23 @@ count — and expects the post drafted straight from it.
 
 ⚠ **Section 5 of the plan lists facts that must be re-verified before publication:**
 visa/ETA 2026 rules, vehicle-kit law, season months.
+
+## Security note — 20 Aug 2026 force-push incident (resolved)
+
+`Manshu48` force-pushed `main` and two blog branches to `5364781` at 2026-08-20T02:11:32Z.
+That commit carried the `postcss.config.mjs` payload (longest line **31,329** chars, 3 IOC
+matches). `github-actions[bot]` force-pushed `main` back to `f6e8202` **9 seconds later**.
+
+**Current state: clean.** `5364781` is not in `origin/main`'s history; a full scan of every
+commit reachable from `main` finds no oversized `postcss.config.mjs`; the tip is 51 chars.
+
+Two things to know for future safety checks, because both cost time on 25 Aug:
+- **GitHub's Activity page pages out quickly.** Force-pushes from five days ago sit below
+  the fold. Use `gh api repos/{owner}/{repo}/activity` and read `before->after`, which
+  shows whether a bad push was *rolled back* — the Activity UI does not make that obvious.
+- **The forged-committer signature (`Saral`, `-0700`) appears on clean commits too.**
+  `f1ef280` carries it and is an ancestor of `main`, but has no payload. Treat the
+  signature as a lead, then check the config line length at that commit before escalating.
 
 ## Open items
 
