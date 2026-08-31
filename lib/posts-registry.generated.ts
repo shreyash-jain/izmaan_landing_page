@@ -14,6 +14,13 @@ export type RegistryEntry = {
 
 export const POST_REGISTRY: RegistryEntry[] = [
   {
+    "slug": "komatipoort-border-crossing-mozambique",
+    "path": "/journal/komatipoort-border-crossing-mozambique",
+    "title": "Komatipoort Border Crossing to Mozambique (2026): Documents, Insurance & What to Expect on the Drive to Pomene",
+    "category": "Getting There",
+    "date": "2026-08-24"
+  },
+  {
     "slug": "turtle-nesting-season-pomene",
     "path": "/journal/turtle-nesting-season-pomene",
     "title": "Turtle Nesting Season in Pomene, Mozambique: When and How to See Them (October–March)",

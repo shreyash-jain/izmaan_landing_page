@@ -377,3 +377,57 @@ mangrove roots, soft morning light, serene, no people. [+ shared style spec]
 - Too "AI"? Add: *"subtle natural colours, realistic, understated documentary
   travel photography."*
 - After dropping files in, run `npm run build` to confirm everything loads.
+
+---
+
+## 7. Komatipoort border crossing post (added 2026-08-24)
+
+> These three use a **documentary/realism variant** of the style spec, not the coastal
+> one. The first pass came back looking like postcards and was rejected — glossy golden
+> hour, saturated colour, perfect tarmac. What worked was asking for the *flaws*: patched
+> and cracked road surfaces, faded markings, dust haze, flat overcast light, sensor noise.
+> Keep the "no text, no signage, no number plates" clause — road and border scenes are
+> exactly where the model wants to letter a sign.
+
+**Shared realism spec**
+```
+Shot on a full-frame DSLR with a 35mm lens, handheld, natural available light, straight out
+of camera with no colour grading and no HDR. Realistic and slightly imperfect: patched and
+repaired tarmac, faded worn road markings, gravel and dust on the verge, tyre scuff marks,
+uneven horizon, ordinary flat daylight rather than dramatic golden hour, mild haze,
+true-to-life muted colours, visible sensor noise in the shadows. Documentary photojournalism,
+not travel-brochure photography. Nothing looks staged or retouched. No people, no text of any
+kind, no road signs, no billboards, no number plates, no logos, no watermark, no borders.
+```
+
+**`public/images/blog/komatipoort-border-crossing-mozambique.jpg`** — cover, 16:9
+```
+Eye-level photograph taken from the shoulder of a two-lane tar highway in the South African
+lowveld on an ordinary weekday morning. The road runs east into the distance, tarmac patched
+in darker strips and cracked at the edges, faded white edge line, red gravel shoulder littered
+with small stones. Thorn scrub and a few flat-topped acacias on the verge, dry winter grass,
+an old wire fence line running parallel, wooden power poles with sagging cables receding along
+the road. The low Lebombo ridge sits blue-grey and hazy on the horizon under a pale washed-out
+sky. Overcast-bright light, no long shadows. Empty road, no vehicles. [+ realism spec] 16:9.
+```
+
+**`public/images/blog/komatipoort-border-crossing-mozambique-approach.jpg`** — square
+```
+Photograph taken from a rocky rise looking down over a river valley in the eastern lowveld of
+South Africa. A brown-green river winds between reed beds and riverine trees; a narrow worn tar
+road with a broken edge follows the far bank toward a gap in low bush-covered hills. Dry khaki
+grass and grey rock in the foreground, sparse leafless thorn trees, hazy layered hills behind
+under a flat white-blue midday sky. Slightly hazy air, ordinary daylight, muted natural colour.
+No buildings, no vehicles, no signage. [+ realism spec] Square framing.
+```
+
+**`public/images/blog/komatipoort-border-crossing-mozambique-en1.jpg`** — square
+```
+Photograph from the driver's side shoulder of a narrow tar highway in coastal Mozambique, taken
+on a hot overcast-bright afternoon. Weathered grey tarmac with pothole repairs and a crumbling
+edge dropping to deep orange-red sand verges, thin worn centre line. Untidy rows of tall coconut
+palms of uneven height on both sides, some leaning, dead brown fronds hanging, low scrappy scrub
+and dry grass between the trunks, a faint sandy footpath worn alongside the road. Flat hazy
+tropical light, pale sky, dust haze in the distance. Empty road, no vehicles, no signage, no
+buildings. [+ realism spec] Square framing.
+```

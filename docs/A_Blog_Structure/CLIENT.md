@@ -93,6 +93,19 @@ the tide, the kit you actually need.
 *Append every new one, newest first, with the date and the reason. Never delete an entry
 — supersede it and say so.*
 
+- **2026-08-25 — Generated images must look like photographs, not brochures.** The first
+  pass for the Komatipoort post came back golden-hour, saturated and glossy; the manager
+  asked for "more realistic images". What fixed it was prompting for the *flaws* — patched
+  and cracked tarmac, faded markings, dust haze, flat overcast light, sensor noise,
+  "documentary photojournalism, not travel-brochure photography". The realism spec is in
+  section 7 of `AI-IMAGE-PROMPTS.md`; start there rather than from the coastal style spec
+  whenever a post's images are roads, vehicles or logistics rather than sea and sand.
+- **2026-08-25 — Don't publish a number that will expire.** For the border post, three
+  widely-repeated figures were wrong or unstable: third party insurance (R280 for a
+  car/SUV/bakkie, not the R140–160 in circulation — that's the motorcycle rate), the
+  "60-hour border queue" (that's *freight*, not tourist lanes), and visa fees (changed
+  twice since 2023). Toll amounts were left out entirely because sources disagreed by 8x.
+  Where a figure moves, name the qualitative fact and link the primary source instead.
 - **2026-07-11 — Advisory, not development.** The relationship now extends into general
   business advice: transport logistics, package and pricing structure, operational asks
   the owner raises informally. Produce findings, options and recommendations. **Only touch
@@ -112,4 +125,4 @@ the tide, the kit you actually need.
   Pomene-specific long-tail logistics (border crossing, supply runs, 4×4 vocabulary from
   the 4x4community.co.za forums) and comparison posts (Pomene vs Barra / Tofo).
 
-*Last reviewed: 2026-08-21.*
+*Last reviewed: 2026-08-25.*
