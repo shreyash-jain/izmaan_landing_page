@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="t d">
+<title id="t">Pomene, Mozambique at a glance</title>
+<desc id="d">Cross-section of the Pomene peninsula from the estuary and mangroves in the west, over the dune and beach, to the reef and Indian Ocean in the east, with key facts: about 106 km south of Vilankulo, reserve established 1964 in Massinga district, lighthouse on the 110 m high point, last stretch deep sand so a 4x4 is needed.</desc>
+<rect width="1600" height="1000" fill="#FBF7EF"/>
+<text x="80" y="110" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#0B3A40">Pomene, Mozambique at a glance</text>
+<text x="80" y="160" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" fill="#0B3A40" opacity="0.7">A narrow peninsula inside the Pomene National Reserve, Inhambane Province</text>
+<!-- sky band -->
+<rect x="80" y="200" width="1440" height="380" rx="28" fill="#EAF6F5"/>
+<clipPath id="cp"><rect x="80" y="200" width="1440" height="380" rx="28"/></clipPath>
+<g clip-path="url(#cp)">
+  <!-- estuary (west) -->
+  <rect x="80" y="440" width="380" height="140" fill="#7FCFC8"/>
+  <path d="M80 440 Q170 430 260 440 T460 440" fill="none" stroke="#fff" stroke-width="3" opacity="0.7"/>
+  <!-- land mass: estuary bank -> dune -> beach -> sea -->
+  <path d="M440 580 L440 445 Q520 420 600 425 Q720 430 800 360 Q880 300 960 330 Q1010 360 1040 420 L1110 455 L1130 580 Z" fill="#EADBB8"/>
+  <path d="M600 425 Q720 430 800 360 Q880 300 960 330 Q1010 360 1040 420" fill="none" stroke="#A9B97A" stroke-width="10" stroke-linecap="round"/>
+  <!-- ocean (east) -->
+  <path d="M1080 440 L1520 440 L1520 580 L1130 580 Z" fill="#16B5AC"/>
+  <path d="M1110 440 Q1160 430 1210 440 T1310 440 T1410 440 T1520 440" fill="none" stroke="#fff" stroke-width="3" opacity="0.8"/>
+  <!-- reef -->
+  <path d="M1250 580 Q1270 545 1295 560 Q1315 535 1340 558 Q1360 540 1385 580 Z" fill="#FF7A59" opacity="0.85"/>
+</g>
+<!-- mangroves -->
+<g><line x1="150" y1="440" x2="150" y2="395" stroke="#3D6B4F" stroke-width="5"/><line x1="150" y1="440" x2="138" y2="452" stroke="#3D6B4F" stroke-width="3"/><line x1="150" y1="440" x2="162" y2="452" stroke="#3D6B4F" stroke-width="3"/><circle cx="150" cy="385" r="24" fill="#4E8A5E"/></g><g><line x1="215" y1="440" x2="215" y2="395" stroke="#3D6B4F" stroke-width="5"/><line x1="215" y1="440" x2="203" y2="452" stroke="#3D6B4F" stroke-width="3"/><line x1="215" y1="440" x2="227" y2="452" stroke="#3D6B4F" stroke-width="3"/><circle cx="215" cy="385" r="24" fill="#4E8A5E"/></g><g><line x1="280" y1="440" x2="280" y2="395" stroke="#3D6B4F" stroke-width="5"/><line x1="280" y1="440" x2="268" y2="452" stroke="#3D6B4F" stroke-width="3"/><line x1="280" y1="440" x2="292" y2="452" stroke="#3D6B4F" stroke-width="3"/><circle cx="280" cy="385" r="24" fill="#4E8A5E"/></g><g><line x1="345" y1="440" x2="345" y2="395" stroke="#3D6B4F" stroke-width="5"/><line x1="345" y1="440" x2="333" y2="452" stroke="#3D6B4F" stroke-width="3"/><line x1="345" y1="440" x2="357" y2="452" stroke="#3D6B4F" stroke-width="3"/><circle cx="345" cy="385" r="24" fill="#4E8A5E"/></g><g><line x1="410" y1="440" x2="410" y2="395" stroke="#3D6B4F" stroke-width="5"/><line x1="410" y1="440" x2="398" y2="452" stroke="#3D6B4F" stroke-width="3"/><line x1="410" y1="440" x2="422" y2="452" stroke="#3D6B4F" stroke-width="3"/><circle cx="410" cy="385" r="24" fill="#4E8A5E"/></g>
+<!-- lodge pin on dune (marker only, not a depiction) -->
+<g transform="translate(905 318)"><path d="M0 0 C-22 -30 -22 -60 0 -66 C22 -60 22 -30 0 0Z" fill="#FF7A59"/><circle cx="0" cy="-44" r="9" fill="#fff"/></g>
+<text x="905" y="236" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B3A40" text-anchor="middle">Izmaan Lodge, on the dune · about 100 m from the sand</text>
+<!-- zone labels -->
+<text x="270" y="625" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#0B3A40" text-anchor="middle">Estuary &amp; mangroves</text><text x="700" y="625" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#0B3A40" text-anchor="middle">Dune bush</text><text x="1070" y="625" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#0B3A40" text-anchor="middle">Beach</text><text x="1390" y="625" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#0B3A40" text-anchor="middle">Reef &amp; Indian Ocean</text>
+<text x="90" y="680" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#0B3A40" opacity="0.6">← WEST</text>
+<text x="1510" y="680" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#0B3A40" opacity="0.6" text-anchor="end">EAST →</text>
+<!-- fact cards -->
+<rect x="80" y="720" width="345" height="170" rx="22" fill="#fff" stroke="#CFEAE7" stroke-width="3"/>
+<text x="108" y="792" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0E948C">106 km</text>
+<text x="108" y="835" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">south of</text><text x="108" y="865" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">Vilankulo (VNX)</text><rect x="445" y="720" width="345" height="170" rx="22" fill="#fff" stroke="#CFEAE7" stroke-width="3"/>
+<text x="473" y="792" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0E948C">1964</text>
+<text x="473" y="835" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">reserve established,</text><text x="473" y="865" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">Massinga district</text><rect x="810" y="720" width="345" height="170" rx="22" fill="#fff" stroke="#CFEAE7" stroke-width="3"/>
+<text x="838" y="792" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#0E948C">110 m</text>
+<text x="838" y="835" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">lighthouse on the</text><text x="838" y="865" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">reserve's high point</text><rect x="1175" y="720" width="345" height="170" rx="22" fill="#fff" stroke="#CFEAE7" stroke-width="3"/>
+<text x="1203" y="792" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#FF7A59">4×4 only</text>
+<text x="1203" y="835" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">deep sand on the</text><text x="1203" y="865" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#0B3A40">last stretch</text>
+<text x="80" y="950" font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#0B3A40" opacity="0.55">Diagram not to scale. Sources: ANAC (Mozambique National Administration of Conservation Areas); Izmaan Lodge. izmaanlodge.co</text>
+</svg>
