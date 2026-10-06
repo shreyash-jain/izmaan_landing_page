@@ -431,3 +431,46 @@ and dry grass between the trunks, a faint sandy footpath worn alongside the road
 tropical light, pale sky, dust haze in the distance. Empty road, no vehicles, no signage, no
 buildings. [+ realism spec] Square framing.
 ```
+
+---
+
+## 8. Pomene hidden-side post (added 2026-10-05)
+
+**`public/images/blog/pomene-mozambique-hidden-paradise.jpg`** — cover, 16:9 (`1822x1024`)
+```
+Photograph taken from the top of a low grassy coastal dune looking along a long, completely
+empty white-sand beach on the Pomene peninsula, Inhambane coast, Mozambique, mid-morning.
+Clear turquoise shallows turning deep teal further out, darker patches of reef visible under
+the water close offshore, a soft line of small breaking waves. Tough dune grass and low
+salt-bush scrub in the foreground, the beach curving away to a low rocky headland in the far
+distance. Bright high sun, pale blue sky with a few thin clouds. Shot on a full-frame camera
+with a 35mm lens, handheld, natural available light, no HDR, no heavy colour grading.
+Realistic and slightly imperfect: uneven wind-blown sand, rippled beach, scattered dry
+seaweed at the tide line, true-to-life colour, mild sea haze on the horizon, visible fine
+grain. Documentary travel photography, not a brochure. No people, no buildings, no boats,
+no text, no logos, no watermark, no borders. Wide 16:9 framing.
+```
+
+The two in-body slots are **hand-built SVG infographics, not generated images** —
+`-at-a-glance.svg` (cross-section + key facts) and `-calendar.svg` (season calendar).
+An image model cannot be trusted to letter facts correctly, so any image that carries
+numbers is drawn as SVG, with its text checked against the article body.
+
+## 9. Mozambique wild coast adventure post (added 2026-10-05)
+
+> In-body slots are drawn SVG infographics (`-menu.svg`, `-route.svg`), not generated.
+> The cover below is **not yet generated** — OpenRouter returned 402 (out of credits) on
+> 2026-10-05, so the post temporarily uses the real `/images/lodge-real-2.jpg`. Swap it in
+> when credits are topped up. Uses the section 7 realism spec, adapted for sand and sea.
+
+**`public/images/blog/mozambique-wild-coast-adventure.jpg`** — cover, 16:9
+```
+Photograph taken from the top of a low vegetated coastal dune on the southern Mozambique
+coast, looking along a single sandy two-wheel 4x4 track that curves down through dune grass,
+low coastal scrub and a few wind-bent bushes toward a wide empty white-sand beach and the
+Indian Ocean. Deep soft sand in the ruts with tyre tread marks and churned edges. The sea is
+turquoise near shore with a darker band over the reef and a line of small white breaking
+waves. Pale blue sky with thin high cloud. No vehicles, no buildings, no people, no animals.
+Ordinary bright mid-morning daylight rather than golden hour, mild coastal haze, true-to-life
+muted colours, slightly uneven horizon. [+ realism spec] 16:9.
+```
