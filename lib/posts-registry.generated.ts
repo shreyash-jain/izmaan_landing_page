@@ -14,6 +14,13 @@ export type RegistryEntry = {
 
 export const POST_REGISTRY: RegistryEntry[] = [
   {
+    "slug": "pomene-mozambique-hidden-paradise",
+    "path": "/journal/pomene-mozambique-hidden-paradise",
+    "title": "The Secret Side of Mozambique: Why Pomene Feels Like a Hidden Paradise",
+    "category": "Travel Guide",
+    "date": "2026-10-05"
+  },
+  {
     "slug": "komatipoort-border-crossing-mozambique",
     "path": "/journal/komatipoort-border-crossing-mozambique",
     "title": "Komatipoort Border Crossing to Mozambique (2026): Documents, Insurance & What to Expect on the Drive to Pomene",
