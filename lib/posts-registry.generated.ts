@@ -21,6 +21,13 @@ export const POST_REGISTRY: RegistryEntry[] = [
     "date": "2026-10-05"
   },
   {
+    "slug": "7-reasons-visit-pomene-mozambique-2026",
+    "path": "/journal/7-reasons-visit-pomene-mozambique-2026",
+    "title": "7 Reasons to Visit Pomene, Mozambique in 2026–27",
+    "category": "Travel Guide",
+    "date": "2026-10-05"
+  },
+  {
     "slug": "komatipoort-border-crossing-mozambique",
     "path": "/journal/komatipoort-border-crossing-mozambique",
     "title": "Komatipoort Border Crossing to Mozambique (2026): Documents, Insurance & What to Expect on the Drive to Pomene",
