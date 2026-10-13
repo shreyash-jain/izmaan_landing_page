@@ -93,6 +93,22 @@ the tide, the kit you actually need.
 *Append every new one, newest first, with the date and the reason. Never delete an entry
 — supersede it and say so.*
 
+- **2026-10-05 — Infographics are hand-built SVGs, not generated images.** The manager asked for "informational
+  infographs". An image model can't be trusted to letter facts, so any visual carrying numbers is drawn as SVG in
+  the brand palette, with every figure checked against the post body. They count toward the three image slots
+  (Pomene post: 1 photo cover + 2 SVGs).
+- **2026-10-05 — Don't promise empty beaches without the cruise caveat.** MSC Cruises calls at Pomene Bay on
+  Durban round trips in the SA summer, with a passenger beach
+  ([MSC](https://www.msccruises.com/int/our-cruises/destinations/south-africa/mozambique/pomene)). Any "no crowds"
+  claim needs a line on cruise days.
+- **2026-10-05 — "Paradise" was allowed in a headline because the manager's brief targeted it as a search term.**
+  It stays out of the body copy. The client hasn't ruled on it yet. An alternative headline was offered.
+- **2026-10-05 — Whale season is June–November on this site.** A brief said July; the site's own whale guide says
+  June, so keep it consistent.
+- **2026-10-05 — Manager's brief format:** a full outline plus "human written, under 1,300 words, rank in AI
+  Overviews". A "Key takeaways" box near the top, one-sentence answers under each main heading, and verbatim FAQ
+  queries are how that was met.
+
 - **2026-08-25 — Generated images must look like photographs, not brochures.** The first
   pass for the Komatipoort post came back golden-hour, saturated and glossy; the manager
   asked for "more realistic images". What fixed it was prompting for the *flaws* — patched

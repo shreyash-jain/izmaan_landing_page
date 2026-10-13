@@ -40,6 +40,7 @@ and committed whenever a post is added.
 |---|---|---|---|
 | Komatipoort border crossing | `blog/komatipoort-border-crossing-mozambique` | **PR #14 open, not merged** | Client review, then merge on the manager's word |
 | Family / whole-lodge stays | `blog/family-whole-lodge-stays` | Merged as PR #13 | — |
+| Pomene hidden paradise (`pomene-mozambique-hidden-paradise`) | none yet — post + 3 images sit in local commit `6f47180` on `blog/komatipoort-border-crossing-mozambique` (with 4 other new posts from another session) | Written 2026-10-05; client reviewing via private artifact `https://claude.ai/artifact/CHuwwkAvMbyx33UvnLHRYs`. **Not sent: Phase 5 Tier 2 on 2026-10-06** (see the 6 Oct security note) | Only on the manager's word: fresh branch off `main` per post, PR, then `preview` |
 | Blog docs standardisation | *(this folder)* | Uncommitted | Commit `docs/A_Blog_Structure/` + `.claude/commands/blog.md` + the `.gitignore` change that lets the command be tracked |
 
 ## The plan
@@ -53,6 +54,19 @@ count — and expects the post drafted straight from it.
 
 ⚠ **Section 5 of the plan lists facts that must be re-verified before publication:**
 visa/ETA 2026 rules, vehicle-kit law, season months.
+
+## Security note — 6 Oct 2026: preview infected, and the laptop itself was compromised
+
+- `preview` and the turtle / family / Komatipoort blog branches were force-pushed to forged merge `c58557a`
+  (postcss payload + `.vscode/tasks.json` `runOn: folderOpen` + fake `public/fonts/fa-solid-400.woff2`).
+  `preview` was repaired forward on 6 Oct (`5092ad7`); **the three blog branches were still infected on 7 Oct.**
+  They hold nothing that isn't already on `main`.
+- A Cloudflare build failing with `Identifier 'createRequire' has already been declared` in `next/font` **is the
+  payload**, not a bug in a post. Never "fix" it by editing the config on that branch.
+- **The laptop's global npm was trojaned on 4 Sep** (`%APPDATA%\npm\node_modules\npm\lib\cli.js`, a space-padded
+  1.5 MB 13th line). Every `npm` command launched a clipboard/credential stealer talking to 91.218.183.174 and
+  193.247.144.38. Defender did not flag it. Restored to the genuine 12 lines on 6 Oct. Treat every credential used on
+  that laptop since 4 Sep as stolen. Before any blog work, check that file's longest line (genuine is 79).
 
 ## Security note — 20 Aug 2026 force-push incident (resolved)
 
