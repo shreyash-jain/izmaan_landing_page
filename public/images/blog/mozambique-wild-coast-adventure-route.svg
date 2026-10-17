@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1315" width="1080" height="1315" role="img" aria-labelledby="t d">
+<title id="t">The 4×4 route to Pomene on Mozambique's wild coast</title>
+<desc id="d">From Vilankulo south on the EN1 on tar, some stretches under repair after the 2025–26 floods; the Pomene turn-off about 8 km north of Massinga; roughly 50 km of dirt; then deep soft sand where you lower tyre pressure and drive in daylight only; arriving at Izmaan Lodge on the dune 100 m from the beach. A high-clearance 4×4 is essential.</desc>
+<style>
+  .h{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#0B3A40}
+  .b{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;fill:#0B3A40}
+  .p{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#fff;font-size:22px}
+</style>
+<rect width="1080" height="1315" fill="#FBF7EF"/>
+<text x="70" y="110" class="h" font-size="52">The way in</text>
+<text x="70" y="160" class="b" font-size="28" opacity="0.7">Vilankulo to Pomene: the road gets wilder as you go</text>
+<line x1="210" y1="290" x2="210" y2="385" stroke="#0B3A40" stroke-width="12"/>
+<line x1="210" y1="465" x2="210" y2="560" stroke="#0B3A40" stroke-width="12"/>
+<line x1="210" y1="640" x2="210" y2="735" stroke="#B07A4A" stroke-width="12" stroke-dasharray="26 14"/>
+<line x1="210" y1="815" x2="210" y2="910" stroke="#B07A4A" stroke-width="12" stroke-dasharray="26 14"/>
+<line x1="210" y1="990" x2="210" y2="1085" stroke="#E2C48F" stroke-width="16" stroke-dasharray="4 12" stroke-linecap="round"/>
+<g transform="translate(0,250)">
+  <circle cx="210" cy="0" r="38" fill="#fff" stroke="#0B3A40" stroke-width="5"/>
+  <text x="210" y="11" class="h" font-size="30" text-anchor="middle" style="fill:#0B3A40">1</text>
+  <text x="290" y="-4" class="h" font-size="34">Vilankulo (VNX)</text>
+  <text x="290" y="36" class="b" font-size="25" opacity="0.8">Fly in. Shop and fuel up properly here.</text>
+  
+</g>
+<g transform="translate(0,425)">
+  <circle cx="210" cy="0" r="38" fill="#fff" stroke="#0B3A40" stroke-width="5"/>
+  <text x="210" y="11" class="h" font-size="30" text-anchor="middle" style="fill:#0B3A40">2</text>
+  <text x="290" y="-4" class="h" font-size="34">South on the EN1</text>
+  <text x="290" y="36" class="b" font-size="25" opacity="0.8">Tar. Some stretches still under repair after</text>
+  <text x="290" y="68" class="b" font-size="25" opacity="0.8">the 2025–26 floods, so re-check before you go.</text>
+</g>
+<g transform="translate(0,600)">
+  <circle cx="210" cy="0" r="38" fill="#fff" stroke="#0B3A40" stroke-width="5"/>
+  <text x="210" y="11" class="h" font-size="30" text-anchor="middle" style="fill:#0B3A40">3</text>
+  <text x="290" y="-4" class="h" font-size="34">The Pomene turn-off</text>
+  <text x="290" y="36" class="b" font-size="25" opacity="0.8">About 8 km north of Massinga.</text>
+  
+</g>
+<g transform="translate(0,775)">
+  <circle cx="210" cy="0" r="38" fill="#fff" stroke="#0B3A40" stroke-width="5"/>
+  <text x="210" y="11" class="h" font-size="30" text-anchor="middle" style="fill:#0B3A40">4</text>
+  <text x="290" y="-4" class="h" font-size="34">Roughly 50 km of dirt</text>
+  <text x="290" y="36" class="b" font-size="25" opacity="0.8">Slow going. The surface sets the pace.</text>
+  
+</g>
+<g transform="translate(0,950)">
+  <circle cx="210" cy="0" r="38" fill="#FF7A59" stroke="#FF7A59" stroke-width="5"/>
+  <text x="210" y="11" class="h" font-size="30" text-anchor="middle" style="fill:#fff">5</text>
+  <text x="290" y="-4" class="h" font-size="34">Deep soft sand</text>
+  <text x="290" y="36" class="b" font-size="25" opacity="0.8">Tyres down, keep momentum. Daylight only.</text>
+  
+</g>
+<g transform="translate(0,1125)">
+  <circle cx="210" cy="0" r="38" fill="#16B5AC" stroke="#16B5AC" stroke-width="5"/>
+  <text x="210" y="11" class="h" font-size="30" text-anchor="middle" style="fill:#fff">6</text>
+  <text x="290" y="-4" class="h" font-size="34">Pomene · Izmaan Lodge</text>
+  <text x="290" y="36" class="b" font-size="25" opacity="0.8">On the dune, 100 m from the beach.</text>
+  
+</g>
+<g transform="translate(70,1220)">
+  <line x1="0" y1="0" x2="60" y2="0" stroke="#0B3A40" stroke-width="12"/><text x="75" y="9" class="b" font-size="22">Tar</text>
+  <line x1="180" y1="0" x2="240" y2="0" stroke="#B07A4A" stroke-width="12" stroke-dasharray="26 14"/><text x="255" y="9" class="b" font-size="22">Dirt</text>
+  <line x1="370" y1="0" x2="430" y2="0" stroke="#E2C48F" stroke-width="16" stroke-dasharray="4 12" stroke-linecap="round"/><text x="445" y="9" class="b" font-size="22">Soft sand</text>
+  <rect x="610" y="-24" width="330" height="48" rx="24" fill="#FF7A59"/><text x="775" y="8" class="p" text-anchor="middle">High-clearance 4×4 only</text>
+</g>
+</svg>

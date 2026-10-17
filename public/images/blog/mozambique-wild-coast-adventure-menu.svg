@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1296" width="1080" height="1296" role="img" aria-labelledby="t d">
+<title id="t">Adventure on Mozambique's wild coast at Pomene</title>
+<desc id="d">Snorkelling: All year, effort easy, mask, fins, reef-safe sunscreen; Diving: All year, effort moderate, bring your card. arrange a boat ahead; Fishing: All year, effort moderate, recreational licence. your own tackle; Whale watching: Jun–Nov, effort easy, binoculars. watch from the dune; Turtle nesting: Oct–Mar, effort easy, at night, red-light torch. keep well back; Mangrove kayak: Rising tide, effort moderate, tide times, water, a hat; Ruins &amp; blowholes: All year, effort easy, camera. go early, before the heat; The sand track in: Daylight only, effort hard, high-clearance 4×4, tyre gauge.</desc>
+<style>
+  .h{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#0B3A40}
+  .b{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;fill:#0B3A40}
+  .p{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#fff;font-size:23px}
+</style>
+<rect width="1080" height="1296" fill="#FBF7EF"/>
+<text x="70" y="110" class="h" font-size="52">The adventure menu</text>
+<text x="70" y="160" class="b" font-size="28" opacity="0.7">Mozambique's wild coast at Pomene: when, how hard, what to bring</text>
+<text x="905" y="212" class="b" font-size="20" opacity="0.6" text-anchor="middle">EFFORT</text>
+<g transform="translate(0,230)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Snorkelling</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Mask, fins, reef-safe sunscreen</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">All year</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Easy</text>
+</g>
+<g transform="translate(0,352)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Diving</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Bring your card. Arrange a boat ahead</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">All year</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Moderate</text>
+</g>
+<g transform="translate(0,474)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Fishing</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Recreational licence. Your own tackle</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">All year</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Moderate</text>
+</g>
+<g transform="translate(0,596)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Whale watching</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Binoculars. Watch from the dune</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">Jun–Nov</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Easy</text>
+</g>
+<g transform="translate(0,718)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Turtle nesting</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Red-light torch. Keep well back</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">Oct–Mar</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Easy, at night</text>
+</g>
+<g transform="translate(0,840)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Mangrove kayak</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Tide times, water, a hat</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">Rising tide</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Moderate</text>
+</g>
+<g transform="translate(0,962)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#fff" stroke="#E4EFEE" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">Ruins &amp; blowholes</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">Camera. Go early, before the heat</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#16B5AC"/><text x="685" y="60" class="p" text-anchor="middle">All year</text>
+  <circle cx="875" cy="42" r="11" fill="#0B3A40" stroke="#0B3A40" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="none" stroke="#0B3A40" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Easy</text>
+</g>
+<g transform="translate(0,1084)">
+  <rect x="50" y="0" width="980" height="106" rx="18" fill="#FFF1EC" stroke="#FF7A59" stroke-width="2"/>
+  <text x="84" y="46" class="h" font-size="31">The sand track in</text>
+  <text x="84" y="84" class="b" font-size="23" opacity="0.75">High-clearance 4×4, tyre gauge</text>
+  <rect x="580" y="30" width="210" height="44" rx="22" fill="#FF7A59"/><text x="685" y="60" class="p" text-anchor="middle">Daylight only</text>
+  <circle cx="875" cy="42" r="11" fill="#FF7A59" stroke="#FF7A59" stroke-width="3"/><circle cx="905" cy="42" r="11" fill="#FF7A59" stroke="#FF7A59" stroke-width="3"/><circle cx="935" cy="42" r="11" fill="#FF7A59" stroke="#FF7A59" stroke-width="3"/>
+  <text x="905" y="86" class="b" font-size="19" text-anchor="middle" opacity="0.75">Hard</text>
+</g>
+<text x="70" y="1256" class="b" font-size="22" opacity="0.6">Fishing needs a licence. Inhambane is a malaria area: see a travel clinic.</text>
+</svg>

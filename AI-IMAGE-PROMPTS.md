@@ -431,3 +431,22 @@ and dry grass between the trunks, a faint sandy footpath worn alongside the road
 tropical light, pale sky, dust haze in the distance. Empty road, no vehicles, no signage, no
 buildings. [+ realism spec] Square framing.
 ```
+
+## 9. Mozambique wild coast adventure post (added 2026-10-05)
+
+> In-body slots are drawn SVG infographics (`-menu.svg`, `-route.svg`), not generated.
+> The cover below is **not yet generated** — OpenRouter returned 402 (out of credits) on
+> 2026-10-05, so the post temporarily uses the real `/images/lodge-real-2.jpg`. Swap it in
+> when credits are topped up. Uses the section 7 realism spec, adapted for sand and sea.
+
+**`public/images/blog/mozambique-wild-coast-adventure.jpg`** — cover, 16:9
+```
+Photograph taken from the top of a low vegetated coastal dune on the southern Mozambique
+coast, looking along a single sandy two-wheel 4x4 track that curves down through dune grass,
+low coastal scrub and a few wind-bent bushes toward a wide empty white-sand beach and the
+Indian Ocean. Deep soft sand in the ruts with tyre tread marks and churned edges. The sea is
+turquoise near shore with a darker band over the reef and a line of small white breaking
+waves. Pale blue sky with thin high cloud. No vehicles, no buildings, no people, no animals.
+Ordinary bright mid-morning daylight rather than golden hour, mild coastal haze, true-to-life
+muted colours, slightly uneven horizon. [+ realism spec] 16:9.
+```
