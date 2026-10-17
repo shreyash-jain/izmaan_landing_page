@@ -79,7 +79,7 @@ Couples can take one unit. Families and friends can [book the whole lodge for up
 
 ## Planning your 2026–27 Pomene trip
 
-![Planning calendar for Pomene, Mozambique from October 2026 to September 2027, showing turtle nesting October to March, hatchlings late December to March, MSC cruise season late November to early April, humpback whales June to September 2027, cooler dry months May to September, and fishing, diving and snorkelling all year](/images/blog/7-reasons-visit-pomene-mozambique-2026-calendar.svg)
+![Planning calendar for Pomene, Mozambique from October 2026 to September 2027, showing turtle nesting October to March, hatchlings late December to March, MSC cruise season late November to early April, humpback whales from June 2027 peaking late July to September, cooler dry months May to September, and fishing, diving and snorkelling all year](/images/blog/7-reasons-visit-pomene-mozambique-2026-calendar.svg)
 
 **Pick the season first, then the dates.** Turtles and whales don't overlap at their best, so decide which one you're coming for. For more detail, see our [best time to visit Pomene](/journal/best-time-to-visit-pomene) guide.
 

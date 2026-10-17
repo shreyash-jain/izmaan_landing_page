@@ -28,6 +28,13 @@ export const POST_REGISTRY: RegistryEntry[] = [
     "date": "2026-10-05"
   },
   {
+    "slug": "mozambique-wild-coast-adventure",
+    "path": "/journal/mozambique-wild-coast-adventure",
+    "title": "Mozambique's Wild Coast: An Adventure Guide to Pomene",
+    "category": "Travel Guide",
+    "date": "2026-10-05"
+  },
+  {
     "slug": "beachfront-lodge-mozambique",
     "path": "/journal/beachfront-lodge-mozambique",
     "title": "Wake Up to the Ocean: What a Beachfront Lodge in Mozambique Really Means",
