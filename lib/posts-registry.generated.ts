@@ -21,6 +21,13 @@ export const POST_REGISTRY: RegistryEntry[] = [
     "date": "2026-10-05"
   },
   {
+    "slug": "mozambique-wild-coast-adventure",
+    "path": "/journal/mozambique-wild-coast-adventure",
+    "title": "Mozambique's Wild Coast: An Adventure Guide to Pomene",
+    "category": "Travel Guide",
+    "date": "2026-10-05"
+  },
+  {
     "slug": "7-reasons-visit-pomene-mozambique-2026",
     "path": "/journal/7-reasons-visit-pomene-mozambique-2026",
     "title": "7 Reasons to Visit Pomene, Mozambique in 2026–27",
