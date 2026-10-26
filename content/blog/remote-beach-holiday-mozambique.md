@@ -2,7 +2,7 @@
 title: "What Does a Remote Beach Holiday in Mozambique Actually Look Like?"
 description: "What a remote beach holiday in Mozambique is really like, hour by hour: the beach, the reef, self-catering, solar power, patchy signal, whales and turtles at Pomene, and who it doesn't suit."
 category: "Travel Guide"
-date: "2026-10-05"
+date: "2026-10-26"
 readingTime: "6 min read"
 cover: "/images/lodge-real-1.jpg"
 coverAlt: "Izmaan Lodge on its dune above the beach at Pomene at dusk, a base for a remote beach holiday in Mozambique"
