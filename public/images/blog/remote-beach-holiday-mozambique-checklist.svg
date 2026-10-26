@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1420" width="1080" height="1420" role="img" aria-labelledby="t d">
+<title id="t">Remote beach holiday in Mozambique: the trade-off and the packing list</title>
+<desc id="d">What you get at Pomene: en-suite rooms and proper beds, a full self-catering kitchen, ocean views, solar power, a near-empty beach and privacy. What you leave behind: nightlife, shops and supermarkets, steady Wi-Fi and signal, resort entertainment and a tar road to the door. Pack: groceries and drinks, drinking water, reef-safe sunscreen and a hat, insect repellent, a head torch with red light, snorkel gear, personal medication, cash, and a power bank.</desc>
+<style>
+  .h{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#0B3A40}
+  .b{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;fill:#0B3A40}
+  .w{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#fff}
+</style>
+<rect width="1080" height="1420" fill="#FBF7EF"/>
+<text x="70" y="110" class="h" font-size="50">Remote, honestly</text>
+<text x="70" y="158" class="b" font-size="28" opacity="0.7">The trade-off, and what to pack for Pomene</text>
+
+<!-- get -->
+<rect x="70" y="210" width="455" height="560" rx="28" fill="#EAF6F5"/>
+<rect x="70" y="210" width="455" height="84" rx="28" fill="#16B5AC"/><rect x="70" y="260" width="455" height="34" fill="#16B5AC"/>
+<text x="110" y="266" class="w" font-size="34">What you get</text>
+<g class="b" font-size="28">
+  <circle cx="118" cy="350" r="16" fill="#16B5AC"/><path d="M110 350 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="150" y="360">En-suite rooms, real beds</text>
+  <circle cx="118" cy="420" r="16" fill="#16B5AC"/><path d="M110 420 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="150" y="430">A full kitchen</text>
+  <circle cx="118" cy="490" r="16" fill="#16B5AC"/><path d="M110 490 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="150" y="500">Ocean views</text>
+  <circle cx="118" cy="560" r="16" fill="#16B5AC"/><path d="M110 560 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="150" y="570">Solar power</text>
+  <circle cx="118" cy="630" r="16" fill="#16B5AC"/><path d="M110 630 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="150" y="640">A near-empty beach</text>
+  <circle cx="118" cy="700" r="16" fill="#16B5AC"/><path d="M110 700 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="150" y="710">Privacy</text>
+</g>
+
+<!-- leave -->
+<rect x="555" y="210" width="455" height="560" rx="28" fill="#FFEDE7"/>
+<rect x="555" y="210" width="455" height="84" rx="28" fill="#FF7A59"/><rect x="555" y="260" width="455" height="34" fill="#FF7A59"/>
+<text x="595" y="266" class="w" font-size="34">What you leave behind</text>
+<g class="b" font-size="28">
+  <circle cx="603" cy="350" r="16" fill="#FF7A59"/><path d="M596 343 l14 14 M610 343 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="360">Nightlife</text>
+  <circle cx="603" cy="420" r="16" fill="#FF7A59"/><path d="M596 413 l14 14 M610 413 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="430">Shops, a supermarket</text>
+  <circle cx="603" cy="490" r="16" fill="#FF7A59"/><path d="M596 483 l14 14 M610 483 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="500">Steady Wi-Fi, signal</text>
+  <circle cx="603" cy="560" r="16" fill="#FF7A59"/><path d="M596 553 l14 14 M610 553 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="570">Resort entertainment</text>
+  <circle cx="603" cy="630" r="16" fill="#FF7A59"/><path d="M596 623 l14 14 M610 623 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="640">A tar road to the door</text>
+  <text x="603" y="715" font-size="24" opacity="0.7">(The last stretch is sand: 4×4 only.)</text>
+</g>
+
+<!-- pack -->
+<rect x="70" y="810" width="940" height="530" rx="28" fill="#0B3A40"/>
+<text x="110" y="880" class="w" font-size="36">Pack before the final drive</text>
+<text x="110" y="922" font-family="Poppins,'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" fill="#7FCFC8">There's no shop in Pomene. If it isn't in the car, you won't have it.</text>
+<g font-family="Poppins,'Segoe UI',Helvetica,Arial,sans-serif" font-size="28" fill="#FBF7EF">
+  <rect x="110" y="970" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="158" y="995">Groceries and drinks</text>
+  <rect x="110" y="1040" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="158" y="1065">Drinking water</text>
+  <rect x="110" y="1110" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="158" y="1135">Reef-safe sunscreen, hat</text>
+  <rect x="110" y="1180" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="158" y="1205">Insect repellent</text>
+  <rect x="110" y="1250" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="158" y="1275">Personal medication</text>
+  <rect x="560" y="970" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="608" y="995">Head torch (red light)</text>
+  <rect x="560" y="1040" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="608" y="1065">Snorkel gear</text>
+  <rect x="560" y="1110" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="608" y="1135">Fishing kit, if you fish</text>
+  <rect x="560" y="1180" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="608" y="1205">Cash</text>
+  <rect x="560" y="1250" width="28" height="28" rx="6" fill="none" stroke="#16B5AC" stroke-width="4"/><text x="608" y="1275">Power bank</text>
+</g>
+<text x="70" y="1390" class="b" font-size="22" opacity="0.6">Izmaan Lodge · Pomene, Inhambane, Mozambique</text>
+</svg>
