@@ -18,7 +18,7 @@ export const POST_REGISTRY: RegistryEntry[] = [
     "path": "/journal/remote-beach-holiday-mozambique",
     "title": "What Does a Remote Beach Holiday in Mozambique Actually Look Like?",
     "category": "Travel Guide",
-    "date": "2026-10-05"
+    "date": "2026-10-26"
   },
   {
     "slug": "pomene-mozambique-hidden-paradise",
