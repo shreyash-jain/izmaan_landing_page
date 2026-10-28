@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1400" width="1080" height="1400" role="img" aria-labelledby="t d">
+<title id="t">Beachfront lodge vs hotel in Mozambique</title>
+<desc id="d">Beach: at a beachfront lodge it is minutes away all day; at a town hotel it is a trip you plan. Pace: set by the tide, or set by the hotel. Privacy: a handful of guests, or busier. Food: often self-catering, or a restaurant. Signal: often patchy, or usually reliable. Nearby: nature, or shops and bars. A beachfront lodge suits couples, divers and anglers, photographers, and families who don't need entertaining. Pick a hotel if you need steady Wi-Fi for work, restaurants nearby, or a tar road to the door.</desc>
+<style>
+  .h{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#0B3A40}
+  .b{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;fill:#0B3A40}
+  .w{font-family:Poppins,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#fff}
+</style>
+<rect width="1080" height="1400" fill="#FBF7EF"/>
+<text x="70" y="110" class="h" font-size="48">Beachfront lodge vs hotel</text>
+<text x="70" y="158" class="b" font-size="28" opacity="0.7">The same holiday, two very different days</text>
+
+<!-- column heads -->
+<rect x="330" y="200" width="340" height="80" rx="22" fill="#16B5AC"/>
+<text x="500" y="252" class="w" font-size="30" text-anchor="middle">Beachfront lodge</text>
+<rect x="690" y="200" width="340" height="80" rx="22" fill="#55646A"/>
+<text x="860" y="252" class="w" font-size="30" text-anchor="middle">Town hotel</text>
+
+<!-- rows -->
+<g>
+  <rect x="50" y="300" width="980" height="80" rx="16" fill="#fff"/>
+  <rect x="50" y="390" width="980" height="80" rx="16" fill="#F3EEE3"/>
+  <rect x="50" y="480" width="980" height="80" rx="16" fill="#fff"/>
+  <rect x="50" y="570" width="980" height="80" rx="16" fill="#F3EEE3"/>
+  <rect x="50" y="660" width="980" height="80" rx="16" fill="#fff"/>
+  <rect x="50" y="750" width="980" height="80" rx="16" fill="#F3EEE3"/>
+</g>
+<g class="h" font-size="28">
+  <text x="80" y="350">Beach</text><text x="80" y="440">Pace</text><text x="80" y="530">Privacy</text>
+  <text x="80" y="620">Food</text><text x="80" y="710">Signal</text><text x="80" y="800">Nearby</text>
+</g>
+<g class="b" font-size="26" text-anchor="middle">
+  <text x="500" y="350">Minutes away, all day</text><text x="860" y="350">A trip you plan</text>
+  <text x="500" y="440">Set by the tide</text><text x="860" y="440">Set by the hotel</text>
+  <text x="500" y="530">A handful of guests</text><text x="860" y="530">Busier</text>
+  <text x="500" y="620">Often self-catering</text><text x="860" y="620">A restaurant</text>
+  <text x="500" y="710">Often patchy</text><text x="860" y="710">Usually reliable</text>
+  <text x="500" y="800">Nature</text><text x="860" y="800">Shops and bars</text>
+</g>
+
+<!-- who it suits -->
+<rect x="50" y="880" width="475" height="420" rx="28" fill="#EAF6F5"/>
+<rect x="50" y="880" width="475" height="84" rx="28" fill="#16B5AC"/><rect x="50" y="930" width="475" height="34" fill="#16B5AC"/>
+<text x="85" y="935" class="w" font-size="30">A beachfront lodge suits</text>
+<g class="b" font-size="26">
+  <circle cx="98" cy="1020" r="16" fill="#16B5AC"/><path d="M90 1020 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="130" y="1030">Couples</text>
+  <circle cx="98" cy="1090" r="16" fill="#16B5AC"/><path d="M90 1090 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="130" y="1100">Divers and anglers</text>
+  <circle cx="98" cy="1160" r="16" fill="#16B5AC"/><path d="M90 1160 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="130" y="1170">Photographers</text>
+  <circle cx="98" cy="1230" r="16" fill="#16B5AC"/><path d="M90 1230 l6 6 l11 -12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><text x="130" y="1240">Families who don't</text><text x="130" y="1274">need entertaining</text>
+</g>
+
+<rect x="555" y="880" width="475" height="420" rx="28" fill="#FFEDE7"/>
+<rect x="555" y="880" width="475" height="84" rx="28" fill="#FF7A59"/><rect x="555" y="930" width="475" height="34" fill="#FF7A59"/>
+<text x="590" y="935" class="w" font-size="30">Pick a hotel if you need</text>
+<g class="b" font-size="26">
+  <circle cx="603" cy="1020" r="16" fill="#FF7A59"/><path d="M596 1013 l14 14 M610 1013 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="1030">Steady Wi-Fi for work</text>
+  <circle cx="603" cy="1090" r="16" fill="#FF7A59"/><path d="M596 1083 l14 14 M610 1083 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="1100">Restaurants nearby</text>
+  <circle cx="603" cy="1160" r="16" fill="#FF7A59"/><path d="M596 1153 l14 14 M610 1153 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="1170">A tar road to the door</text>
+  <circle cx="603" cy="1230" r="16" fill="#FF7A59"/><path d="M596 1223 l14 14 M610 1223 l-14 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="635" y="1240">Nightlife</text>
+</g>
+
+<text x="540" y="1370" class="h" font-size="20" text-anchor="middle" opacity="0.6">izmaanlodge.co</text>
+</svg>

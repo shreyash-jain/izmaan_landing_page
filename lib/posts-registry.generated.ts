@@ -14,6 +14,13 @@ export type RegistryEntry = {
 
 export const POST_REGISTRY: RegistryEntry[] = [
   {
+    "slug": "beachfront-lodge-mozambique",
+    "path": "/journal/beachfront-lodge-mozambique",
+    "title": "Wake Up to the Ocean: What a Beachfront Lodge in Mozambique Really Means",
+    "category": "Travel Guide",
+    "date": "2026-10-28"
+  },
+  {
     "slug": "remote-beach-holiday-mozambique",
     "path": "/journal/remote-beach-holiday-mozambique",
     "title": "What Does a Remote Beach Holiday in Mozambique Actually Look Like?",
